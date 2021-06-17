@@ -1,0 +1,257 @@
+@font-face {
+  font-family: san-francisco-regular;
+  src: url("../assets/sanFrancisco/SFUIText-Regular.otf");
+}
+
+@font-face {
+  font-family: san-francisco-semibold;
+  src: url("../assets/sanFrancisco/SFUIText-Semibold.otf");
+}
+
+@font-face {
+  font-family: san-francisco-bold;
+  src: url("../assets/sanFrancisco/SFUIText-Bold.otf");
+}
+
+@font-face {
+  font-family: san-francisco-medium;
+  src: url("../assets/sanFrancisco/SFUIText-Medium.otf");
+}
+
+@font-face {
+  font-family: san-francisco-light;
+  src: url("../assets/sanFrancisco/SFUIText-Light.otf");
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: san-francisco-regular;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: #fafafa;
+}
+
+body header {
+  padding: 1rem 4rem;
+}
+
+body header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body header nav a {
+  text-decoration: none;
+  color: #6ea0cf;
+  letter-spacing: .05rem;
+}
+
+body header nav .brand-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+body header nav .brand-name img {
+  height: 3rem;
+  margin-right: 2rem;
+}
+
+body header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body header nav ul li {
+  list-style-type: none;
+  margin-left: 1.5rem;
+  padding: .5rem 1rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-size: 1.1rem;
+}
+
+body header nav ul li:hover a {
+  color: #1f9933;
+}
+
+body header nav ul li a {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body header nav ul .active a {
+  color: #e07a27;
+}
+
+body main {
+  position: relative;
+}
+
+body main .bg-div {
+  height: calc((var(--vh) * 100) - (var(--hH) * 100));
+  background: url("../assets/images/svg/bg-home.svg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  z-index: -50;
+}
+
+body main .main-wrapper {
+  z-index: 0;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  right: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main .main-wrapper .landing-view {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc((var(--vh) * 100) - (var(--hH) * 100));
+}
+
+body main .main-wrapper .landing-view .left-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .main-wrapper .landing-view .left-content .big-display h1 {
+  font-size: 3.5rem;
+  line-height: 3.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 3rem 0rem;
+  color: #0e121b;
+  font-family: san-francisco-medium;
+}
+
+body main .main-wrapper .landing-view .left-content .big-display h1 span {
+  font-family: san-francisco-bold;
+}
+
+body main .main-wrapper .landing-view .left-content .big-display h1 span:nth-child(1) {
+  font-family: san-francisco-light;
+}
+
+body main .main-wrapper .landing-view .left-content button {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background-color: #fafafa;
+  outline: none;
+  border: none;
+  margin-right: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 10rem;
+  font-size: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #686868;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  -webkit-box-shadow: 0px 0px 5px 3px #8686864d;
+          box-shadow: 0px 0px 5px 3px #8686864d;
+}
+
+body main .main-wrapper .landing-view .left-content button i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: .5rem;
+}
+
+body main .main-wrapper .landing-view .left-content button:hover {
+  background-color: #e07a27;
+  color: #fafafa;
+}
+
+body main .main-wrapper .landing-view .left-content .btns-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main .main-wrapper .landing-view .left-content .btns-wrapper button:nth-child(2) {
+  background-color: transparent;
+  border: 1px solid #0e121b;
+  color: #0e121b;
+}
+
+body main .main-wrapper .landing-view .left-content .btns-wrapper button:nth-child(2):hover {
+  background-color: #0e121b;
+  color: #fafafa;
+}
+
+body main .main-wrapper .landing-view .right-illustration {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .main-wrapper .landing-view .right-illustration img {
+  height: 100%;
+}
+/*# sourceMappingURL=style.css.map */

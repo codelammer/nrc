@@ -1,0 +1,203 @@
+$primary-blue: rgb(110, 160, 207);
+$black: rgb(14, 18, 27);
+$light-black: rgb(104, 104, 104);
+$orange: rgb(224, 122, 39);
+$green: rgb(31, 153, 51);
+$white-bg: #fafafa;
+
+
+
+
+@font-face {
+    font-family: san-francisco-regular;
+    src: url('../assets/sanFrancisco/SFUIText-Regular.otf');
+}
+@font-face {
+    font-family: san-francisco-semibold;
+    src: url('../assets/sanFrancisco/SFUIText-Semibold.otf');
+}
+@font-face {
+    font-family: san-francisco-bold;
+    src: url("../assets/sanFrancisco/SFUIText-Bold.otf");
+}
+@font-face {
+    font-family: san-francisco-medium;
+    src: url("../assets/sanFrancisco/SFUIText-Medium.otf");
+}
+@font-face {
+    font-family: san-francisco-light;
+    src: url("../assets/sanFrancisco/SFUIText-Light.otf");
+}
+
+@mixin flexCentered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//override all elements
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: san-francisco-regular;
+}
+
+
+
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: $white-bg;
+    header{
+        padding: 1rem 4rem;
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            a{
+                text-decoration: none;
+                color: $primary-blue;
+                letter-spacing: .05rem;
+            }
+            .brand-name{
+                // border: 1px solid rebeccapurple;
+                @include flexCentered();
+                font-size: 1.5rem;
+                font-weight: bold;
+                img{
+                    height:3rem;
+                    margin-right: 2rem;
+                }  
+            }
+            ul{
+                display: flex;
+
+                li{
+                   list-style-type: none; 
+                //    border: 1px solid red;
+                   margin-left: 1.5rem;
+                   padding: .5rem 1rem;
+                   transition: all 0.5s ease;
+                   font-size: 1.1rem;
+                   &:hover{
+                       a{
+                           color: $green;
+                       }
+                   }
+                   a{
+                    transition: all 0.5s ease;
+                   }
+                }
+                .active{
+                    a{
+                        color: $orange;
+                    }
+                }
+            }
+        }
+    }
+    main{
+        // border: 1px solid green;
+        position: relative;
+        .bg-div{
+            height: calc((var(--vh) * 100) - (var(--hH) * 100));
+            background: url("../assets/images/svg/bg-home.svg");
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            z-index: -50;
+            // border: 1px solid red;
+        }
+        .main-wrapper{
+            // border: 3px solid rebeccapurple;
+            z-index: 0;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            left: 0px;
+            right: 0px;
+            display: flex;
+            .landing-view{
+                // border: 1px solid red;
+                width: 100%;
+                display: flex;
+                height: calc((var(--vh) * 100) - (var(--hH) * 100));
+                .left-content{
+                    // border: 1px solid blue;
+                    flex: 1;
+                    padding: 0 4rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .big-display{
+                        h1{
+                            font-size: 3.5rem;
+                            line-height: 3.3rem;
+                            display: flex;
+                            flex-direction: column;
+                            margin: 3rem 0rem;
+                            color: $black;
+                            font-family: san-francisco-medium;
+                            span{
+                                font-family: san-francisco-bold;
+                                &:nth-child(1){
+                                    font-family: san-francisco-light;
+                                }
+                            }
+                        }
+                    }
+                    button{
+                        align-self: flex-start;
+                        background-color: $white-bg;
+                        outline: none;
+                        border: none;
+                        margin-right: 2rem;
+                        padding: 1rem 2rem;
+                        border-radius: 10rem;
+                        font-size: 1.3rem;
+                        display: flex;
+                        color: $light-black;
+                        cursor: pointer;
+                        transition: background-color 0.5s ease;
+                        box-shadow: 0px 0px 5px 3px #8686864d;
+                        i{
+                            display: flex;
+                            @include flexCentered();
+                            margin-left: .5rem;
+                        }
+                        &:hover{
+                            background-color: $orange;
+                            color: $white-bg;
+                        }
+                    }
+                    .btns-wrapper{
+                        display:  flex;
+                        button{
+                            
+                            &:nth-child(2){
+                                background-color: transparent;
+                                border: 1px solid $black;
+                                color: $black;
+                                &:hover{
+                                    background-color: $black;
+                                    color: $white-bg;
+                                }
+                            }
+
+                        }
+                    }
+                }
+                .right-illustration{
+                    //border: 1px solid rgb(103, 207, 17);
+                    flex: 1;
+                    padding: 3rem;
+                    @include flexCentered();
+                    img{
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
