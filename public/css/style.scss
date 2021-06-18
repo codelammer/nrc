@@ -43,11 +43,29 @@ $white-bg: #fafafa;
     font-family: san-francisco-regular;
 }
 
+@keyframes inHumbergerAnimation {
+    0%{
+        top: -1000%;
+    }
+    100%{
+        top: 100%;
+    }
+}
+@keyframes outHumbergerAnimation {
+    0%{
+        top: 100%;
+    }
+    100%{
+        top: -1000%;
+    }
+}
+
 
 
 
 body{
-    height: 100vh;
+    height: var(--vh);
+    // border: 1px solid red;
     width: 100%;
     background-color: $white-bg;
     header{
@@ -114,11 +132,16 @@ body{
         position: relative;
         .bg-div{
             height: calc((var(--vh) * 100) - (var(--hH) * 100));
-            background: url("../assets/images/svg/bg-home.svg");
-            background-size: 100% auto;
-            background-repeat: no-repeat;
+            // background: url("../assets/images/svg/bg-home.svg");
+            // background-size: 100% 50px;
+            // background-repeat: no-repeat;
             z-index: -50;
             // border: 1px solid red;
+            svg{
+                height: 100%;
+                width: 100%;
+                // border: 1px solid red;
+            }
         }
         .main-wrapper{
             // border: 3px solid rebeccapurple;
@@ -224,12 +247,19 @@ body{
             justify-content: space-between;
             position: relative;
             nav{
-                // border: 2px solid green;
+                // border: 2px solid red;
+                padding: 1rem;
                 .brand-name{
                     flex: 1;
                     display: flex;
                     justify-content: flex-start;
+                    z-index: 10;
                     // border: 1px solid red;
+                    background-color: $white-bg;
+                    img{
+                        // border: 1px solid yellow;
+                        margin-right: 0.8rem;
+                    }
                 }
                 ul{
                     // border: 1px solid blue;
@@ -240,11 +270,10 @@ body{
                     position: absolute;
                     flex-direction: column;
                     border-radius: 0px 0px 30px 30px;
-                    top: 100%;
                     left: 0px;
                     right: 0px;
-                    z-index: 10;
-                    transition: display 1s ease;
+                    z-index: 5;
+                    animation: inHumbergerAnimation 0.5s ease;
                     
                     li{
                         margin: 1.5rem 1rem;
@@ -258,20 +287,30 @@ body{
                     visibility: hidden;
                     &:checked ~ ul{
                         display: flex;
-
+                        top: 100%;
                     }
                     &:checked ~ label i{
                         display: flex;
                         transform: rotate(90deg);
+                        color: $orange;
                     }
+                    &:not(:checked) ~ label i{
+                        display: flex;
+                        transform: unset;
+                    }
+                    &:not(:checked) ~ ul{
+                        animation: outHumbergerAnimation 1s ease;
+                    }
+
                 }
                 label{
                     display: flex;
                     cursor: pointer;
+                    z-index: 10;
                     i{
                         font-size: 2rem;
                         color: $primary-blue;
-                        transition: transform 0.3s ease;
+                        transition: all 0.3s ease;
                         &:hover{
                             transform: rotate(90deg);
                         }
@@ -281,18 +320,24 @@ body{
         }
 
         main{
+            .bg-div{
+                width: 100%;
+                background-size: 100% 100%;
+                // border: 1px solid green;
+                svg{
+                    height: calc((var(--vh) * 80) - (var(--hH) * 100));
+                    // border: 1px solid red;
+                }
+            }
             .main-wrapper{
                 flex-direction: column;
                 width: 100%;
-                .bg-div{
-                    border: 2px solid red;
-                    width: 100%;
-                    background-size: 100% 100%;
-                }
                 .landing-view{
-                    flex-direction: column;
+                    flex-direction: column-reverse;
                     .left-content{
                         // border: 1px solid red;
+                        flex: 0;
+                        padding: 0px 1rem;
                         .big-display{
                             h1{
                                 font-size: 2rem;
@@ -309,8 +354,20 @@ body{
                         }
                     }
                     .right-illustration{
+                        // border: 1px solid greenyellow;
+                        flex: 1;
+                        padding: unset !important;
+                        // overflow: hidden;
+                        position: relative;
                         img{
-                            transform: scale(0.8);
+                            position: absolute;
+                            top: 0px;
+                            width: 100%;
+                            z-index: -5;
+                            transform-origin: top right;
+                            transform: scale(0.6);
+                            // border: 1px solid red;
+                            height: unset;
                         }
                     }
                 }
