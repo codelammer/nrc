@@ -221,6 +221,11 @@ body main .main-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: auto;
 }
 
 body main .main-wrapper .landing-view {
@@ -349,6 +354,271 @@ body main .main-wrapper .landing-view .right-illustration {
 
 body main .main-wrapper .landing-view .right-illustration img {
   height: 100%;
+}
+
+body main .btm .why-us {
+  height: calc((var(--vh) * 100));
+  background-image: url("../assets/images/svg/bg-orange.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+}
+
+body main .btm .why-us .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #44454b;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .btm .why-us .title i {
+  font-size: 2rem;
+  color: #2069ad;
+}
+
+body main .btm .why-us .title h3 {
+  font-size: 1.5rem;
+}
+
+body main .btm .why-us .why-us-body {
+  color: #44454b;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .btm .why-us .why-us-body p {
+  text-align: center;
+  margin: 2rem;
+}
+
+body main .btm .why-us .why-us-body .cards-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main .btm .why-us .why-us-body .cards-wrapper .card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 50px;
+  background-color: #fafafa;
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.219);
+          box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.219);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .btm .why-us .why-us-body .cards-wrapper i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 3rem;
+  padding: 1rem;
+  color: #686868;
+}
+
+body main .btm .keynote-speakers {
+  height: calc((var(--vh) * 100));
+  background-color: #f27b1f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+}
+
+body main .btm .keynote-speakers .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fafafa;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .btm .keynote-speakers .title i {
+  font-size: 3rem;
+  color: #fafafa;
+}
+
+body main .btm .keynote-speakers .title h3 {
+  font-size: 1.5rem;
+  font-family: san-francisco-light;
+  letter-spacing: .2rem;
+}
+
+body main .btm .keynote-speakers .cards-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .btm .keynote-speakers .cards-wrapper .card {
+  min-height: 25rem;
+  max-width: 18rem;
+  border-radius: 30px;
+  background-color: #fafafa;
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.219);
+          box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.219);
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 2rem;
+}
+
+body main .btm .keynote-speakers .cards-wrapper .card .card-img {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  overflow: hidden;
+  max-height: 18rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .btm .keynote-speakers .cards-wrapper .card .card-img img {
+  height: 19rem;
+}
+
+body main .btm .keynote-speakers .cards-wrapper .card .card-footer {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  padding: 0.5rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+}
+
+body main .btm .keynote-speakers .cards-wrapper .card .card-footer h4 {
+  font-size: 1.2rem;
+  color: #0f2030;
+  letter-spacing: 1px;
+}
+
+body main .btm .keynote-speakers .cards-wrapper .card .card-footer hr {
+  border-bottom: none;
+  opacity: 30%;
+  margin: 0.5rem 0;
+}
+
+body main .btm .keynote-speakers .cards-wrapper .card .card-footer h5 {
+  color: #e07a27;
+  font-size: 1rem;
+}
+
+body main .btm .keynote-speakers .cards-wrapper .card:last-child {
+  margin: unset;
+}
+
+body main .btm .keynote-speakers .cards-wrapper i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 3rem;
+  padding: 1rem;
+  color: #686868;
 }
 
 body main .sign-in-wrapper {
@@ -718,6 +988,42 @@ body main .sign-in-wrapper #sign-up .inputs-wrapper {
     -webkit-transform: scale(0.6);
             transform: scale(0.6);
     height: unset;
+  }
+  body main .btm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .btm .why-us {
+    height: unset;
+    background-image: unset;
+  }
+  body main .btm .why-us .why-us-body .cards-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .btm .why-us .why-us-body .cards-wrapper .card {
+    margin-right: unset;
+    margin-bottom: 1rem;
+  }
+  body main .btm .keynote-speakers {
+    height: unset;
+  }
+  body main .btm .keynote-speakers .cards-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .btm .keynote-speakers .cards-wrapper .card {
+    margin-right: unset;
+    margin-bottom: 1rem;
   }
   body main .sign-in-wrapper {
     overflow: auto;
