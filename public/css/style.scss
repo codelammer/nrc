@@ -63,7 +63,6 @@ $white-bg: #fafafa;
 
 
 
-
 body{
     height: var(--vh);
     // border: 1px solid red;
@@ -126,11 +125,6 @@ body{
                             }
                         }
                    }
-                }
-                .active{
-                    a{
-                        color: $orange;
-                    }
                 }
             }
         }
@@ -417,6 +411,22 @@ body{
 
     }
 }
+
+
+
+
+//toggle classes
+.active{
+    color: $orange;
+}
+
+
+
+
+
+
+
+
 
 
 

@@ -3,9 +3,20 @@ const _getEl = (el) => {
 }
 
 let headerNav = _getEl('header');
-let navList = _getEl('nav-list');
+let navAnchorTags = document.querySelector("#nav-list").querySelectorAll("a");
+let currentLoc = location.href;
+
+navAnchorTags.forEach((element) => {
+    console.log(element.href);
+    if(element.href == currentLoc){   
+        element.classList.add('active');
+    }else{
+        element.classList.remove('active');
+    }
+});
 
 
+//change active class
 let hH = `${headerNav.offsetHeight * 0.01}px`;
 let vh = `${window.innerHeight * 0.01}px`;
 document.documentElement.style.setProperty("--vh", vh);
@@ -19,17 +30,6 @@ window.addEventListener('resize', ()=>{
     
 });
 
-// for (let i = 0; i < navList.children.length; i++) {
-//     console.log(navList.children[i]);  
-//     if (i == navList.children.length - 1) {
-
-
-//         navList.children[i].addEventListener('click', () => {
-//             console.log("li clicked");
-//             navList.children[i].classList.add('active');   
-//         });   
-//     }  
-// }
 
 
 

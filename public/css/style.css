@@ -165,10 +165,6 @@ body header nav ul li:last-child a:hover {
   background-color: #f58830;
 }
 
-body header nav ul .active a {
-  color: #e07a27;
-}
-
 body header input {
   display: none;
 }
@@ -557,6 +553,10 @@ body main .sign-in-wrapper #sign-up .inputs-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.active {
+  color: #e07a27;
 }
 
 @media screen and (max-width: 700px) {
