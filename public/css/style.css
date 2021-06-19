@@ -124,6 +124,9 @@ body header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body header nav ul li {
@@ -142,6 +145,24 @@ body header nav ul li:hover a {
 body header nav ul li a {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+body header nav ul li:last-child {
+  padding: 0;
+  display: table;
+}
+
+body header nav ul li:last-child a {
+  border-radius: 50px;
+  padding: .5rem 1rem;
+  background-color: #e07a27;
+  cursor: pointer;
+  color: #fafafa;
+  font-size: 1rem;
+}
+
+body header nav ul li:last-child a:hover {
+  background-color: #f58830;
 }
 
 body header nav ul .active a {
@@ -300,13 +321,16 @@ body main .main-wrapper .landing-view .left-content .btns-wrapper {
   display: flex;
 }
 
-body main .main-wrapper .landing-view .left-content .btns-wrapper button:nth-child(2) {
+body main .main-wrapper .landing-view .left-content .btns-wrapper button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: transparent;
   border: 1px solid #0e121b;
   color: #0e121b;
 }
 
-body main .main-wrapper .landing-view .left-content .btns-wrapper button:nth-child(2):hover {
+body main .main-wrapper .landing-view .left-content .btns-wrapper button:hover {
   background-color: #0e121b;
   color: #fafafa;
 }
@@ -406,7 +430,7 @@ body main .sign-in-wrapper form .input-items input:focus ~ label {
 }
 
 body main .sign-in-wrapper form .input-items input:hover {
-  border: 1px solid #187a0f;
+  border: 1px solid #18aad6;
 }
 
 body main .sign-in-wrapper form .input-items input:valid ~ label {
@@ -525,6 +549,16 @@ body main .sign-in-wrapper form .form-footer a:hover {
   color: #e07a27;
 }
 
+body main .sign-in-wrapper #sign-up {
+  display: none;
+}
+
+body main .sign-in-wrapper #sign-up .inputs-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media screen and (max-width: 700px) {
   body header {
     -webkit-box-pack: justify;
@@ -636,6 +670,7 @@ body main .sign-in-wrapper form .form-footer a:hover {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
+    overflow: auto;
   }
   body main .main-wrapper .landing-view {
     -webkit-box-orient: vertical;
@@ -683,6 +718,28 @@ body main .sign-in-wrapper form .form-footer a:hover {
     -webkit-transform: scale(0.6);
             transform: scale(0.6);
     height: unset;
+  }
+  body main .sign-in-wrapper {
+    overflow: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .sign-in-wrapper #sign-up {
+    top: 4rem;
+    bottom: 4rem;
+    margin: 1rem 0;
+    position: relative;
+  }
+  body main .sign-in-wrapper #sign-up .inputs-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 

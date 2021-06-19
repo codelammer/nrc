@@ -71,7 +71,6 @@ body{
     background-color: $white-bg;
     header{
         display: flex;
-        // border: 2px solid red;
         nav{
             padding: 1rem 4rem;
             flex: 1;
@@ -95,7 +94,7 @@ body{
             }
             ul{
                 display: flex;
-
+                align-items: center;
                 li{
                    list-style-type: none; 
                 //    border: 1px solid red;
@@ -110,6 +109,22 @@ body{
                    }
                    a{
                     transition: all 0.5s ease;
+                   }
+                   &:last-child{
+                    //    border: 1px solid yellow;
+                       padding: 0;
+                       display: table;
+                       a{
+                            border-radius: 50px;
+                            padding: .5rem 1rem;
+                            background-color: $orange;
+                            cursor: pointer;
+                            color: $white-bg;
+                            font-size: 1rem;
+                            &:hover{
+                                background-color: rgb(245, 136, 48);;
+                            }
+                        }
                    }
                 }
                 .active{
@@ -224,16 +239,14 @@ body{
                     }
                     .btns-wrapper{
                         display:  flex;
-                        button{
-                            
-                            &:nth-child(2){
-                                background-color: transparent;
-                                border: 1px solid $black;
-                                color: $black;
-                                &:hover{
-                                    background-color: $black;
-                                    color: $white-bg;
-                                }
+                        button{                           
+                            align-items: center;                            
+                            background-color: transparent;
+                            border: 1px solid $black;
+                            color: $black;
+                            &:hover{
+                                background-color: $black;
+                                color: $white-bg;
                             }
 
                         }
@@ -256,7 +269,7 @@ body{
         // End HOME PAGE
 
 
-        // Start SIGNI-IN PAGE
+        // Start SIGNIN-IN PAGE
         .sign-in-wrapper{
             // border: 1px solid springgreen;
             position: absolute;
@@ -301,7 +314,7 @@ body{
                         font-size: 0.8rem;
                        }
                        &:hover{
-                            border: 1px solid #187a0f;
+                            border: 1px solid #18aad6;
                        }
                        &:valid ~ label{
                            bottom: 100%;
@@ -388,6 +401,15 @@ body{
                             color: $orange;
                         }
                     }
+                }
+            }
+
+
+            #sign-up{
+                // border: 1px solid red;
+                display: none;
+                .inputs-wrapper{
+                    display: flex;
                 }
             }
         }
@@ -492,6 +514,7 @@ body{
             .main-wrapper{
                 flex-direction: column;
                 width: 100%;
+                overflow: auto;
                 .landing-view{
                     flex-direction: column-reverse;
                     .left-content{
@@ -529,6 +552,26 @@ body{
                             // border: 1px solid red;
                             height: unset;
                         }
+                    }
+                }
+
+
+
+            }
+
+            .sign-in-wrapper{
+                // border: 2px solid rgb(37, 24, 24);
+               overflow: auto;
+               display: flex;
+               flex-direction: column;
+               #sign-up{
+                    top: 4rem;
+                    bottom: 4rem;
+                    margin: 1rem 0;
+                    position: relative;
+                    // border: 2px solid greenyellow;
+                    .inputs-wrapper{
+                        flex-direction: column;
                     }
                 }
             }

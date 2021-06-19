@@ -16,12 +16,13 @@
                 <span>NRC</span>
             </a>
             <input type="checkbox" id="checkbox">
-            <ul>
+            <ul  id="nav-list">
                 <li class="active"><a href="../index.html">Home</a></li>
                 <li><a href="">About</a></li>
                 <li><a href="">Covid 19</a></li>
                 <li><a href="">Sign in</a></li>
                 <li><a href="">Contact us</a></li>
+                <li><a href="">Donate <i class="fi-rr-resize"></i></a></li>
             </ul>
             <label for="checkbox"><i class="fi-rr-align-right"></i></label>
             <!-- css trick to toggle humburger menu in media queries -->
@@ -38,7 +39,7 @@
 
             <!-- sign in -->
 
-            <form action="#">
+            <form action="#" id="sign-in">
                 <h1>LOGIN</h1>
                 <div class="input-items">
                     <input type="text" required>
@@ -66,12 +67,79 @@
                         <hr>
                         <h2>Don't have an account?</h2>
                     </div>
-                    <a href="#">Sign Up</a>
+                    <a href="#" id="sign-up-btn-redirect">Sign Up</a>
                 </div>
             </form>
 
 
+            <form action="" id="sign-up">
+                <h1>SIGN UP</h1>
+                <div class="inputs-wrapper">
+                    
+                    <div class="left-side">
+                        <div class="input-items">
+                            <input type="email" required>
+                            <label for="">
+                                <p>
+                                    <i class="fi-rr-user"></i>
+                                    <span>Email address</span>
+                                </p>
+                            </label>
+                        </div>
+                        <div class="input-items">
+                            <input type="text" required>
+                            <label for="">
+                                <p>
+                                    <i class="fi-rr-user"></i>
+                                    <span>First name</span>
+                                </p>
+                            </label>
+                        </div>
+                        <div class="input-items">
+                            <input type="text" required>
+                            <label for="">
+                                <p>
+                                    <i class="fi-rr-user"></i>
+                                    <span>Second name</span>
+                                </p>
+                            </label>
+                        </div>
+                    </div>
 
+                    <div class="right-side">
+                        <div class="input-items">
+                            <input type="password" required>
+                            <label for="">
+                                <p>
+                                    <i class="fi-rr-key"></i>
+                                    <span>Password</span>
+                                </p>
+                            </label>
+                        </div>
+                        <div class="input-items">
+                            <input type="password" required>
+                            <label for="">
+                                <p>
+                                    <i class="fi-rr-key"></i>
+                                    <span>Confirm password</span>
+                                </p>
+                            </label>
+                        </div>
+                    </div>  
+    
+                    
+                </div>
+                <div class="form-footer">
+                    <button type="submit">
+                        SIGN UP
+                    </button>
+                    <div class="hr-text">
+                        <hr>
+                        <h2>Have an account?</h2>
+                    </div>
+                    <a href="#" id="sign-in-btn-redirect">Sign In</a>
+                </div>
+            </form>
 
             <!-- register -->
         </div>
