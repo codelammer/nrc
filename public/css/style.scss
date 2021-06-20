@@ -644,6 +644,261 @@ body{
 
         //End DONATION PAGE
 
+
+
+
+        //start about page
+        .about-wrapper{
+            position: absolute;
+            // border: 1px solid red;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            padding: 0 4rem;
+            display: flex;
+            flex-direction: column;
+            .about-header{
+                // border: 1px solid red;
+                @include flexCentered();
+                flex-direction: column;
+                color: $dark-blue;
+                i{
+                    font-size: 3rem;
+                    color: $light-black;
+                }
+                h2{
+
+                }
+            }
+            .about-body{
+                color: $blue-black;
+                margin: 1rem;
+                // border: 1px solid red;
+                padding: 2rem;
+                background-color: $white-bg;
+                border-radius: 0px 4rem;
+                p{
+                    text-align: center;
+                }
+            }
+        }
+        //End about page
+
+
+
+
+
+        //start contact-form
+        .contact-wrapper{
+            // border: 1px solid red;
+            padding: 0 4rem;
+            height: calc(var(--vh) * 100);
+            .contact-header{
+                // border: 1px solid red;
+                display: flex;
+                align-items: center;
+                h1{
+
+                    font-family: san-francisco-bold;
+                    color: $dark-blue;
+                }
+                i{
+                    font-size: 2rem;
+                    display: flex;
+                    margin-left: 0.8rem;
+                }
+            }
+
+
+            .contact-body{
+                // border: 1px solid greenyellow;
+                display: flex;
+
+                .left-form{
+                    flex: 1;
+                    form{
+                        border-radius: 30px;
+                        display: flex;
+                        padding: 1rem 0rem;
+                        flex-direction: column;
+                        .input-items{
+                            position: relative;
+                            display: flex;
+                            margin: 0rem 2rem 1rem 0rem;
+                            height: 3.5rem;
+                            input{
+                                background-color: transparent;
+                                border-radius: 50px;
+                               border: 1px solid rgb(184, 184, 184);
+                               color: $black;
+                               padding: 0 1.5rem;
+                               display: flex;
+                               align-items: center;
+                               font-family: san-francisco-semibold;
+                               width: 100%;
+                               transition: border 0.5s ease;
+                               font-size: 1rem;
+                               &:focus{
+                                   outline: none;
+                                border: 1px solid #f88d12ea;
+                               }
+                               &:focus ~ label{
+                                bottom: 100%;
+                                font-size: 0.8rem;
+                               }
+                               &:hover{
+                                    border: 1px solid #18aad6;
+                               }
+                               &:valid ~ label{
+                                   bottom: 100%;
+                                   font-size: 0.8rem;                           
+                               }
+                           } 
+                           label{
+                                background-color: transparent;
+                                display: flex;
+                                align-items: center;
+                                padding: 0px 1rem;
+                                color: $light-black;
+                                position: absolute;
+                                pointer-events: none;
+                                transition: all 0.5s ease;
+                                top: 0;
+                                bottom: 0;
+                                right: 0;
+                                left: 0;
+                                p{
+                                    background-color: $white-bg;
+                                    border-radius: 10rem;
+                                    padding: 0 0.5rem;
+                                }
+                           }
+                        }
+                        .input-item-text-area{
+                            display: flex;
+                            position: relative;
+                            justify-content: stretch;
+                            margin-right: 2rem;
+                           textarea{
+                            border-radius: 20px;
+                            border: 1px solid rgb(184, 184, 184);
+                            color: $black;
+                            background-color: transparent;
+                            width: 100%;
+                            padding: 0 1.5rem;
+                            display: flex;
+                            align-items: center;
+                            font-family: san-francisco-semibold;
+                            transition: border 0.5s ease;
+                            font-size: 1rem;
+                            &:focus{
+                                outline: none;
+                                border: 1px solid #f88d12ea;
+                            }
+                            &:focus ~ label{
+                                bottom: 100%;
+                                top: -1.5rem;
+                                font-size: 0.8rem;
+                            }
+                            &:hover{
+                                    border: 1px solid #18aad6;
+                            }
+                            &:valid ~ label{
+                                bottom: 100%;
+                                font-size: 0.8rem;                           
+                            }
+
+                            }
+                            label{
+                                background-color: transparent;
+                                display: flex;
+                                align-items: flex-start;
+                                padding: 1rem 1rem;
+                                color: $light-black;
+                                position: absolute;
+                                pointer-events: none;
+                                transition: all 0.5s ease;
+                                top: 0;
+                                bottom: 0;
+                                right: 0;
+                                left: 0;
+                                p{
+                                    background-color: $white-bg;
+                                    border-radius: 10rem;
+                                    padding: 0 0.5rem;
+                                }
+                           }
+                        }
+                        .form-footer{
+                            padding: 2rem 0rem;
+                            // border: 1px solid red;
+                            display: flex;
+                            button{
+                                margin-top: 0px;
+                                background-color: $dark-blue;
+                                color: $white-bg;
+                                @include flexCentered();
+                                border: none;
+                                outline: none;
+                                padding: 0.5rem 2rem;
+                                font-size: 1.3rem;
+                                border-radius: 50px;
+                                cursor: pointer;
+                                transition: background-color 0.3s ease;
+                                &:hover{
+                                    background-color: rgb(44, 84, 122);
+                                }
+                                &:active{
+                                    background-color: $orange;
+                                }
+                            }
+                        }
+                    }
+                }
+                .right-contact-details{
+                    flex: 1;
+                    box-shadow: 0px 0px 6px 2px rgba(85, 85, 85, 0.164);
+                    background-color: white;
+                    border-radius: 2rem;
+                    .find-us{
+                        display: flex;
+                        flex-direction: column;
+                        padding: 3rem;
+                        color: $blue-black;
+                        h1{
+                            display: flex;
+                            flex-direction: column;
+                            i{
+                                margin: 1rem 0;
+                            }
+                        }
+                        p{
+                            display: flex;
+                            flex-direction: column;
+                            margin: 1rem 0rem;
+                        }
+                        .contact-item{
+                            display: flex;
+                            align-items: center;
+                            i{
+                                font-size: 1.2rem;
+                                display: flex;
+                                margin-right: 1rem;
+                            }
+                            p{
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //End contact page
+
+
+
+
     }
 }
 
@@ -871,6 +1126,20 @@ body{
                 .secure-payment{
                     margin: unset;
                     width: 100%;
+                }
+            }
+
+
+            .contact-wrapper{
+                flex-direction: column;
+                overflow: hidden;
+                .left-form{
+                    margin: unset;
+                    margin-bottom: 2rem;
+                }
+                .right-contact-details{
+                    margin: unset;
+
                 }
             }
         }

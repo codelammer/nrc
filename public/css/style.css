@@ -919,6 +919,358 @@ body main .donation-wrapper .secure-payment h2 {
   margin: 3rem 0;
 }
 
+body main .about-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 0 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .about-wrapper .about-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #0f2030;
+}
+
+body main .about-wrapper .about-header i {
+  font-size: 3rem;
+  color: #686868;
+}
+
+body main .about-wrapper .about-body {
+  color: #10415b;
+  margin: 1rem;
+  padding: 2rem;
+  background-color: #fafafa;
+  border-radius: 0px 4rem;
+}
+
+body main .about-wrapper .about-body p {
+  text-align: center;
+}
+
+body main .contact-wrapper {
+  padding: 0 4rem;
+  height: calc(var(--vh) * 100);
+}
+
+body main .contact-wrapper .contact-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .contact-wrapper .contact-header h1 {
+  font-family: san-francisco-bold;
+  color: #0f2030;
+}
+
+body main .contact-wrapper .contact-header i {
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 0.8rem;
+}
+
+body main .contact-wrapper .contact-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main .contact-wrapper .contact-body .left-form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+body main .contact-wrapper .contact-body .left-form form {
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 0rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .contact-wrapper .contact-body .left-form form .input-items {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0rem 2rem 1rem 0rem;
+  height: 3.5rem;
+}
+
+body main .contact-wrapper .contact-body .left-form form .input-items input {
+  background-color: transparent;
+  border-radius: 50px;
+  border: 1px solid #b8b8b8;
+  color: #0e121b;
+  padding: 0 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: san-francisco-semibold;
+  width: 100%;
+  -webkit-transition: border 0.5s ease;
+  transition: border 0.5s ease;
+  font-size: 1rem;
+}
+
+body main .contact-wrapper .contact-body .left-form form .input-items input:focus {
+  outline: none;
+  border: 1px solid #f88d12ea;
+}
+
+body main .contact-wrapper .contact-body .left-form form .input-items input:focus ~ label {
+  bottom: 100%;
+  font-size: 0.8rem;
+}
+
+body main .contact-wrapper .contact-body .left-form form .input-items input:hover {
+  border: 1px solid #18aad6;
+}
+
+body main .contact-wrapper .contact-body .left-form form .input-items input:valid ~ label {
+  bottom: 100%;
+  font-size: 0.8rem;
+}
+
+body main .contact-wrapper .contact-body .left-form form .input-items label {
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 1rem;
+  color: #686868;
+  position: absolute;
+  pointer-events: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+body main .contact-wrapper .contact-body .left-form form .input-items label p {
+  background-color: #fafafa;
+  border-radius: 10rem;
+  padding: 0 0.5rem;
+}
+
+body main .contact-wrapper .contact-body .left-form form .input-item-text-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  margin-right: 2rem;
+}
+
+body main .contact-wrapper .contact-body .left-form form .input-item-text-area textarea {
+  border-radius: 20px;
+  border: 1px solid #b8b8b8;
+  color: #0e121b;
+  background-color: transparent;
+  width: 100%;
+  padding: 0 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: san-francisco-semibold;
+  -webkit-transition: border 0.5s ease;
+  transition: border 0.5s ease;
+  font-size: 1rem;
+}
+
+body main .contact-wrapper .contact-body .left-form form .input-item-text-area textarea:focus {
+  outline: none;
+  border: 1px solid #f88d12ea;
+}
+
+body main .contact-wrapper .contact-body .left-form form .input-item-text-area textarea:focus ~ label {
+  bottom: 100%;
+  top: -1.5rem;
+  font-size: 0.8rem;
+}
+
+body main .contact-wrapper .contact-body .left-form form .input-item-text-area textarea:hover {
+  border: 1px solid #18aad6;
+}
+
+body main .contact-wrapper .contact-body .left-form form .input-item-text-area textarea:valid ~ label {
+  bottom: 100%;
+  font-size: 0.8rem;
+}
+
+body main .contact-wrapper .contact-body .left-form form .input-item-text-area label {
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 1rem 1rem;
+  color: #686868;
+  position: absolute;
+  pointer-events: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+body main .contact-wrapper .contact-body .left-form form .input-item-text-area label p {
+  background-color: #fafafa;
+  border-radius: 10rem;
+  padding: 0 0.5rem;
+}
+
+body main .contact-wrapper .contact-body .left-form form .form-footer {
+  padding: 2rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main .contact-wrapper .contact-body .left-form form .form-footer button {
+  margin-top: 0px;
+  background-color: #0f2030;
+  color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  outline: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.3rem;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+body main .contact-wrapper .contact-body .left-form form .form-footer button:hover {
+  background-color: #2c547a;
+}
+
+body main .contact-wrapper .contact-body .left-form form .form-footer button:active {
+  background-color: #e07a27;
+}
+
+body main .contact-wrapper .contact-body .right-contact-details {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-shadow: 0px 0px 6px 2px rgba(85, 85, 85, 0.164);
+          box-shadow: 0px 0px 6px 2px rgba(85, 85, 85, 0.164);
+  background-color: white;
+  border-radius: 2rem;
+}
+
+body main .contact-wrapper .contact-body .right-contact-details .find-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3rem;
+  color: #10415b;
+}
+
+body main .contact-wrapper .contact-body .right-contact-details .find-us h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .contact-wrapper .contact-body .right-contact-details .find-us h1 i {
+  margin: 1rem 0;
+}
+
+body main .contact-wrapper .contact-body .right-contact-details .find-us p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem 0rem;
+}
+
+body main .contact-wrapper .contact-body .right-contact-details .find-us .contact-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .contact-wrapper .contact-body .right-contact-details .find-us .contact-item i {
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 1rem;
+}
+
 .active {
   color: #e07a27;
 }
@@ -1157,6 +1509,20 @@ body main .donation-wrapper .secure-payment h2 {
   body main .donation-wrapper .secure-payment {
     margin: unset;
     width: 100%;
+  }
+  body main .contact-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: hidden;
+  }
+  body main .contact-wrapper .left-form {
+    margin: unset;
+    margin-bottom: 2rem;
+  }
+  body main .contact-wrapper .right-contact-details {
+    margin: unset;
   }
 }
 
