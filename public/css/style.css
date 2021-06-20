@@ -358,7 +358,7 @@ body main .main-wrapper .landing-view .right-illustration img {
 
 body main .btm .why-us {
   height: calc((var(--vh) * 100));
-  background-image: url("../assets/images/svg/bg-orange.png");
+  background-image: url("../assets/images/svg/bg-orange.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   display: -webkit-box;
@@ -464,7 +464,7 @@ body main .btm .why-us .why-us-body .cards-wrapper i {
 
 body main .btm .keynote-speakers {
   height: calc((var(--vh) * 100));
-  background-color: #f27b1f;
+  background-color: #f57e20;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -544,6 +544,11 @@ body main .btm .keynote-speakers .cards-wrapper .card {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-right: 2rem;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 body main .btm .keynote-speakers .cards-wrapper .card .card-img {
@@ -604,6 +609,11 @@ body main .btm .keynote-speakers .cards-wrapper .card .card-footer h5 {
 
 body main .btm .keynote-speakers .cards-wrapper .card:last-child {
   margin: unset;
+}
+
+body main .btm .keynote-speakers .cards-wrapper .card:hover {
+  -webkit-transform: rotate(3deg) scale(1.1);
+          transform: rotate(3deg) scale(1.1);
 }
 
 body main .btm .keynote-speakers .cards-wrapper i {
@@ -823,6 +833,90 @@ body main .sign-in-wrapper #sign-up .inputs-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+body main .donation-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4rem;
+}
+
+body main .donation-wrapper .left-panel {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #fafafa;
+  border-radius: 30px;
+  padding-bottom: 1rem;
+}
+
+body main .donation-wrapper .left-panel h1 {
+  color: #10415b;
+  font-size: 2rem;
+  font-family: san-francisco-bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .donation-wrapper .left-panel h1 span {
+  font-family: san-francisco-bold;
+}
+
+body main .donation-wrapper .left-panel .faq-item {
+  color: #10415b;
+  font-size: 0.9rem;
+  margin: 1rem 2rem;
+}
+
+body main .donation-wrapper .left-panel .faq-item h2 {
+  color: #e07a27;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .donation-wrapper .left-panel .faq-item h2 i {
+  color: #10415b;
+  font-size: 2rem;
+  margin-right: 0.8rem;
+}
+
+body main .donation-wrapper .left-panel .faq-item p {
+  color: #10415b;
+}
+
+body main .donation-wrapper .secure-payment {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  border-radius: 30px;
+  background-color: #fafafa;
+  padding: 4rem;
+  margin-left: 2rem;
+}
+
+body main .donation-wrapper .secure-payment h2 {
+  text-align: center;
+  margin: 3rem 0;
 }
 
 .active {
@@ -1046,6 +1140,23 @@ body main .sign-in-wrapper #sign-up .inputs-wrapper {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  body main .donation-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1rem;
+    overflow: auto;
+  }
+  body main .donation-wrapper .left-panel {
+    width: 100%;
+    margin: unset;
+    margin-bottom: 2rem;
+  }
+  body main .donation-wrapper .secure-payment {
+    margin: unset;
+    width: 100%;
   }
 }
 

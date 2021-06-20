@@ -2,6 +2,7 @@ $primary-blue: rgb(110, 160, 207);
 $blue: rgb(32, 105, 173);
 $black: rgb(14, 18, 27);
 $dark-blue: rgb(15, 32, 48);
+$blue-black: #10415b;
 $light-black: rgb(104, 104, 104);
 $dark-grey: #44454b;
 $orange: rgb(224, 122, 39);
@@ -268,7 +269,7 @@ body{
             // top: 100%;
             .why-us{
                 height: calc((var(--vh) * 100));
-                background-image: url('../assets/images/svg/bg-orange.png');
+                background-image: url('../assets/images/svg/bg-orange.jpg');
                 background-size: 100% auto;
                 background-repeat: no-repeat;
                 display: flex;
@@ -327,7 +328,7 @@ body{
             }
             .keynote-speakers{
                 height: calc((var(--vh) * 100));
-                background-color: #f27b1f;
+                background-color: #f57e20;
                 display: flex;
                 flex-direction: column;
                 padding: 2rem;
@@ -363,6 +364,8 @@ body{
                             @include flexCentered();
                             flex-direction: column;
                             margin-right: 2rem;
+                            cursor: pointer;
+                            transition: transform 0.5s ease;
                             .card-img{
                                 // border: 1px solid red;
                                 flex: 5;
@@ -399,6 +402,9 @@ body{
                             }
                             &:last-child{
                                 margin: unset;
+                            }
+                            &:hover{
+                                transform: rotate(3deg) scale(1.1);
                             }
                         }
                         i{
@@ -570,6 +576,73 @@ body{
             }
         }
         // End HOME PAGE
+
+
+
+        //Start DONATION PAGE
+
+        .donation-wrapper{
+            // border: 2px solid blue;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            padding: 4rem;
+            .left-panel{
+                flex: 1;
+                background-color: $white-bg;
+                border-radius: 30px;
+                h1{
+                    color: $blue-black;
+                    font-size: 2rem;
+                    font-family: san-francisco-bold;
+                    display: flex;
+                    flex-direction: column;
+                    span{
+                        font-family: san-francisco-bold;
+                    }
+                }
+                padding-bottom: 1rem;
+                .faq-item{
+                    color: $blue-black;
+                    font-size: 0.9rem;
+                    margin: 1rem 2rem;
+                    h2{
+                        color: $orange;
+                        font-size: 0.9rem;
+                        letter-spacing: 1px;
+                        display: flex;
+                        align-items: center;
+                        i{
+                            color: $blue-black;
+                            font-size: 2rem;
+                            margin-right: 0.8rem;
+                        }
+                    }
+                    p{
+                        color: $blue-black;
+                    }
+                }
+
+            }
+            .secure-payment{
+                flex: 2;
+                // border: 1px solid rebeccapurple;
+                border-radius: 30px;
+                background-color: $white-bg;
+                padding: 4rem;
+                margin-left: 2rem;
+                h2{
+                    text-align: center;
+                    margin: 3rem 0;
+                }
+            }
+        }
+
+        //End DONATION PAGE
 
     }
 }
@@ -781,6 +854,23 @@ body{
                     .inputs-wrapper{
                         flex-direction: column;
                     }
+                }
+            }
+
+
+
+            .donation-wrapper{
+                flex-direction: column;
+                padding: 1rem;
+                overflow: auto;
+                .left-panel{
+                    width: 100%;
+                    margin: unset;
+                    margin-bottom: 2rem;
+                }
+                .secure-payment{
+                    margin: unset;
+                    width: 100%;
                 }
             }
         }
