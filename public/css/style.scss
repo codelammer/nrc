@@ -2,6 +2,7 @@ $primary-blue: rgb(110, 160, 207);
 $blue: rgb(32, 105, 173);
 $black: rgb(14, 18, 27);
 $dark-blue: rgb(15, 32, 48);
+$blue-black-alt: #003087;
 $blue-black: #10415b;
 $light-black: rgb(104, 104, 104);
 $dark-grey: #44454b;
@@ -899,6 +900,153 @@ body{
 
 
 
+        //start covid19
+        .covid-wrapper{
+            // border: 1px solid red;
+            .covid-19-body{
+                height: calc((var(--vh) *100) - (var(--hH) * 100));
+                display: flex;
+                padding: 0 4rem;
+                .covid-left-panel{
+                    flex: 2;
+                    // border: 1px solid green;
+                    display: flex;
+                    flex-direction: column;
+                    .covid-left-header{
+                        // border: 1px solid red;
+                        h1{
+                            font-family: san-francisco-bold;
+                            color: $blue-black-alt;
+                        }
+                        p{
+                            font-size: 1rem;
+                            text-transform: uppercase;
+                            color: $light-black;
+                        }
+                    }
+
+                    .mask-img{
+                        display: flex;
+                        justify-content: flex-start;
+                        margin: 1rem 0;
+                        svg{
+                            max-height: 18rem;
+
+                        }
+                    }
+                    .covid-left-footer{
+                        // border: 1px solid red;
+                        margin-right: 2rem;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        justify-content: center;
+                        .hr{
+                            border: 1px solid $light-black;
+                            opacity: 50%;
+                            width: 100%;
+                            border-bottom: unset;
+                        }
+                        h2{
+                            font-family: san-francisco-bold;
+                            color: $blue-black-alt;
+                            margin: 1rem  0;
+                        }
+                        p{
+                            color: $blue-black-alt;
+                            font-size: 1.3rem;
+
+                        }
+                        h3{
+                          color: $orange;  
+                          align-self: center;
+                          font-size: 1rem;
+                          margin: 1rem  0;
+                        }
+                    }
+                }
+                .covid-right-panel{
+                    // border: 1px solid red;
+                    background-color: white;
+                    border-radius: 2rem;
+                    flex: 3;
+                    position: relative;
+                    overflow: hidden;
+                    margin-bottom: 2rem;
+                    box-shadow: 0px 0px 8px 2px rgba(110, 110, 110, 0.281);
+                    .covid-bg-banner{
+                        height: 100%;
+                        // border: 1px solid blue;
+                        svg{
+                            // border: 1px solid red;
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                    .covid-right-panel-body{
+                        // border: 1px solid blue;
+                        padding: 2rem;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        display: flex;
+                        flex-direction: column;
+                        h1{
+                            color: $blue-black-alt;
+                            font-family: san-francisco-bold;
+                        }
+                        p{
+                            color: $light-black;
+                            font-family: san-francisco-light;
+                            margin: 1rem;
+                            
+                        }
+                        h2{
+                            color: $light-black;
+                            font-size: 1rem;
+                            font-family: san-francisco-light;
+                            text-transform: uppercase;
+                        }
+                        .prev-card{
+                            // border: 1px solid red;
+                            flex: 1;
+                            display: flex;
+                            .prev-card-item{
+                                display: flex;
+                                flex-direction: column;
+                                // border: 1px solid green;
+                                @include flexCentered();
+                                flex: 1;
+                                .prev-card-img{
+                                    // border: 1px solid black;
+                                    height: 6rem;
+                                    width: 6rem;
+                                    @include flexCentered();
+                                    border-radius: 50%;
+                                    background-color: $blue;
+                                    
+                                    img{
+                                        height: 4rem;
+                                        filter: invert(100%);
+                                        // border: 1px solid red;
+                                    }
+                                }
+                                p{
+                                    color: $light-black;
+                                }
+                            }
+    
+                        }
+                    }
+                }
+            }
+        }
+        //end covid 19
+
+
+
     }
 }
 
@@ -1131,17 +1279,101 @@ body{
 
 
             .contact-wrapper{
-                flex-direction: column;
-                overflow: hidden;
-                .left-form{
-                    margin: unset;
-                    margin-bottom: 2rem;
-                }
-                .right-contact-details{
-                    margin: unset;
-
+                padding: 1rem;
+                // border: 1px solid red;
+                height: unset;
+                .contact-body{
+                    // border: 1px solid rebeccapurple;
+                    flex-direction: column;
+                    overflow: hidden;
+                    .left-form{
+                        margin: unset;
+                        margin-bottom: 2rem;
+                        
+                        form{
+                            .input-items{
+                                width: 100%;
+                            }
+                            .input-item-text-area{
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .right-contact-details{
+                        margin: unset;
+                        margin: 0 0.1rem;
+                    }
                 }
             }
+
+
+
+            .covid-wrapper{
+                height: unset;
+                overflow: auto;
+                .covid-19-body{
+                    height: unset;
+                    flex-direction: column;
+                    padding: 1rem;
+                    // border: 1px solid red;
+                    overflow: auto;
+                    .covid-left-panel{
+                        .covid-left-header{
+                            h1{
+                                
+                            }
+                            p{
+                                
+                            }
+                        }
+                        .covid-left-footer{
+                            margin: unset;
+                        }
+                    }
+                    .covid-right-panel{
+                        min-height: 65rem;
+                        .covid-bg-banner{
+                            svg{
+                                height: 66rem;
+                            }
+
+                        }
+                        .covid-right-panel-body{
+
+                            h1{
+        
+                            }
+                            p{
+        
+                            }
+                            h2{
+        
+                            }
+                            .prev-card{
+                                @include flexCentered();
+                                flex-direction: column;
+                                width: 100%;
+                                .prev-card-item{
+                                    .prev-card-img{
+                                        img{
+        
+                                        }
+                                        p{
+        
+                                        }
+                                    }
+                                }
+        
+                            }
+                        }
+
+                    }
+                }
+            }
+
+
+
+
         }
     }
 }

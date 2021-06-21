@@ -1271,6 +1271,207 @@ body main .contact-wrapper .contact-body .right-contact-details .find-us .contac
   margin-right: 1rem;
 }
 
+body main .covid-wrapper .covid-19-body {
+  height: calc((var(--vh) *100) - (var(--hH) * 100));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 4rem;
+}
+
+body main .covid-wrapper .covid-19-body .covid-left-panel {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .covid-wrapper .covid-19-body .covid-left-panel .covid-left-header h1 {
+  font-family: san-francisco-bold;
+  color: #003087;
+}
+
+body main .covid-wrapper .covid-19-body .covid-left-panel .covid-left-header p {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #686868;
+}
+
+body main .covid-wrapper .covid-19-body .covid-left-panel .mask-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 1rem 0;
+}
+
+body main .covid-wrapper .covid-19-body .covid-left-panel .mask-img svg {
+  max-height: 18rem;
+}
+
+body main .covid-wrapper .covid-19-body .covid-left-panel .covid-left-footer {
+  margin-right: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .covid-wrapper .covid-19-body .covid-left-panel .covid-left-footer .hr {
+  border: 1px solid #686868;
+  opacity: 50%;
+  width: 100%;
+  border-bottom: unset;
+}
+
+body main .covid-wrapper .covid-19-body .covid-left-panel .covid-left-footer h2 {
+  font-family: san-francisco-bold;
+  color: #003087;
+  margin: 1rem  0;
+}
+
+body main .covid-wrapper .covid-19-body .covid-left-panel .covid-left-footer p {
+  color: #003087;
+  font-size: 1.3rem;
+}
+
+body main .covid-wrapper .covid-19-body .covid-left-panel .covid-left-footer h3 {
+  color: #e07a27;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 1rem;
+  margin: 1rem  0;
+}
+
+body main .covid-wrapper .covid-19-body .covid-right-panel {
+  background-color: white;
+  border-radius: 2rem;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  -webkit-box-shadow: 0px 0px 8px 2px rgba(110, 110, 110, 0.281);
+          box-shadow: 0px 0px 8px 2px rgba(110, 110, 110, 0.281);
+}
+
+body main .covid-wrapper .covid-19-body .covid-right-panel .covid-bg-banner {
+  height: 100%;
+}
+
+body main .covid-wrapper .covid-19-body .covid-right-panel .covid-bg-banner svg {
+  height: 100%;
+  width: 100%;
+}
+
+body main .covid-wrapper .covid-19-body .covid-right-panel .covid-right-panel-body {
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .covid-wrapper .covid-19-body .covid-right-panel .covid-right-panel-body h1 {
+  color: #003087;
+  font-family: san-francisco-bold;
+}
+
+body main .covid-wrapper .covid-19-body .covid-right-panel .covid-right-panel-body p {
+  color: #686868;
+  font-family: san-francisco-light;
+  margin: 1rem;
+}
+
+body main .covid-wrapper .covid-19-body .covid-right-panel .covid-right-panel-body h2 {
+  color: #686868;
+  font-size: 1rem;
+  font-family: san-francisco-light;
+  text-transform: uppercase;
+}
+
+body main .covid-wrapper .covid-19-body .covid-right-panel .covid-right-panel-body .prev-card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main .covid-wrapper .covid-19-body .covid-right-panel .covid-right-panel-body .prev-card .prev-card-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+body main .covid-wrapper .covid-19-body .covid-right-panel .covid-right-panel-body .prev-card .prev-card-item .prev-card-img {
+  height: 6rem;
+  width: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  background-color: #2069ad;
+}
+
+body main .covid-wrapper .covid-19-body .covid-right-panel .covid-right-panel-body .prev-card .prev-card-item .prev-card-img img {
+  height: 4rem;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+body main .covid-wrapper .covid-19-body .covid-right-panel .covid-right-panel-body .prev-card .prev-card-item p {
+  color: #686868;
+}
+
 .active {
   color: #e07a27;
 }
@@ -1511,18 +1712,67 @@ body main .contact-wrapper .contact-body .right-contact-details .find-us .contac
     width: 100%;
   }
   body main .contact-wrapper {
+    padding: 1rem;
+    height: unset;
+  }
+  body main .contact-wrapper .contact-body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     overflow: hidden;
   }
-  body main .contact-wrapper .left-form {
+  body main .contact-wrapper .contact-body .left-form {
     margin: unset;
     margin-bottom: 2rem;
   }
-  body main .contact-wrapper .right-contact-details {
+  body main .contact-wrapper .contact-body .left-form form .input-items {
+    width: 100%;
+  }
+  body main .contact-wrapper .contact-body .left-form form .input-item-text-area {
+    width: 100%;
+  }
+  body main .contact-wrapper .contact-body .right-contact-details {
     margin: unset;
+    margin: 0 0.1rem;
+  }
+  body main .covid-wrapper {
+    height: unset;
+    overflow: auto;
+  }
+  body main .covid-wrapper .covid-19-body {
+    height: unset;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1rem;
+    overflow: auto;
+  }
+  body main .covid-wrapper .covid-19-body .covid-left-panel .covid-left-footer {
+    margin: unset;
+  }
+  body main .covid-wrapper .covid-19-body .covid-right-panel {
+    min-height: 65rem;
+  }
+  body main .covid-wrapper .covid-19-body .covid-right-panel .covid-bg-banner svg {
+    height: 66rem;
+  }
+  body main .covid-wrapper .covid-19-body .covid-right-panel .covid-right-panel-body .prev-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
   }
 }
 
