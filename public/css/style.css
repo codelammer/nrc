@@ -2418,6 +2418,52 @@ body main .stands-wrapper form .confirm-exhibition .submit-stand button:hover {
             flex-direction: column;
     width: 100%;
   }
+  body main .stands-wrapper {
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  body main .stands-wrapper form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .stands-wrapper form .exhibition-stands .stands-layout {
+    min-height: 20rem;
+  }
+  body main .stands-wrapper form .exhibition-stands .stands-layout .upper-row .input-stand-top:first-child {
+    overflow: hidden;
+  }
+  body main .stands-wrapper form .exhibition-stands .stands-layout .upper-row .input-stand-top label span {
+    font-size: 8px;
+  }
+  body main .stands-wrapper form .exhibition-stands .stands-layout .middle-row .middle-row-left {
+    height: 100%;
+  }
+  body main .stands-wrapper form .exhibition-stands .stands-layout .middle-row .middle-row-left .input-stand-right:first-child {
+    overflow: hidden;
+  }
+  body main .stands-wrapper form .exhibition-stands .stands-layout .middle-row .middle-row-left .input-stand-right label span {
+    font-size: 8px;
+  }
+  body main .stands-wrapper form .exhibition-stands .stands-layout .middle-row .middle-row-right {
+    height: 100%;
+  }
+  body main .stands-wrapper form .exhibition-stands .stands-layout .middle-row .middle-row-right .input-stand-right:first-child {
+    overflow: hidden;
+  }
+  body main .stands-wrapper form .exhibition-stands .stands-layout .middle-row .middle-row-right .input-stand-right label span {
+    font-size: 8px;
+  }
+  body main .stands-wrapper form .exhibition-stands .stands-layout .lower-row .input-stand-bottom:first-child {
+    overflow: hidden;
+  }
+  body main .stands-wrapper form .exhibition-stands .stands-layout .lower-row .input-stand-bottom label span {
+    font-size: 8px;
+  }
+  body main .stands-wrapper form .confirm-exhibition {
+    margin-left: unset;
+  }
 }
 
 @media screen and (max-width: 500px) {

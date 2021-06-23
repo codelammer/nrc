@@ -1783,6 +1783,73 @@ body{
             }
 
 
+            .stands-wrapper{
+                padding: 1rem;
+                overflow-y: auto;
+                form{
+                    flex-direction: column;
+                    .exhibition-stands{
+                        .stands-layout{
+                            min-height: 20rem;
+                            .upper-row{
+                                .input-stand-top{
+                                    &:first-child{
+                                        overflow: hidden;
+                                    }
+                                    label{
+                                        span{
+                                            font-size: 8px;
+                                        }
+                                    }
+                                }
+                            }
+                            .middle-row{
+                                .middle-row-left{
+                                    height: 100%;
+                                    .input-stand-right{
+                                        &:first-child{
+                                            overflow: hidden;
+                                        }
+                                        label{
+                                            span{
+                                                font-size: 8px;
+                                            }
+                                        }                                    
+                                    }
+                                }
+                                .middle-row-right{
+                                    height: 100%;
+                                    .input-stand-right{
+                                        &:first-child{
+                                            overflow: hidden;
+                                        }
+                                        label{
+                                            span{
+                                                font-size: 8px;
+                                            }
+                                        }                                    
+                                    }                                    
+                                }
+                            }
+                            .lower-row{
+                                .input-stand-bottom{
+                                    &:first-child{
+                                        overflow: hidden;
+                                    }
+                                    label{
+                                        span{
+                                            font-size: 8px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .confirm-exhibition{
+                        margin-left: unset;
+                    }
+                }
+            }
 
 
         }
