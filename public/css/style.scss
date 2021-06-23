@@ -12,7 +12,6 @@ $white-bg: #fafafa;
 
 
 
-
 @font-face {
     font-family: san-francisco-regular;
     src: url('../assets/sanFrancisco/SFUIText-Regular.otf');
@@ -1141,6 +1140,14 @@ body{
                                         font-size: 0.8rem;
                                     }
                                 }
+                                &::after{
+                                    content: 'Entrance';
+                                    color: $blue-black;
+                                    font-size: 0.8rem;
+                                    display:  flex;
+                                    align-items: center;
+                                    padding-left: 0.5rem;
+                                }
                             }
                             &:last-child{
                                 &::after{
@@ -1196,6 +1203,7 @@ body{
                         }
 
                         .middle-row{
+                            overflow: auto;
                             flex: 1;
                             // border: 1px solid greenyellow;
                             display: grid;
@@ -1242,10 +1250,174 @@ body{
                                     }
                                 }
                             }
+
+
+
+
+
+
+
+
+
                             .middle-row-middle{
                                 // border: 1px solid blue;
+                                overflow: hidden;
                                 grid-area: mrm;
+                                padding: 2rem;
+                                display: grid;
+                                grid-template-columns: repeat(11, 1fr);
+                                grid-template-rows: repeat(5, 1fr);
+                                grid-template-areas: "m1m3 m1m3 m1m3  m1m3 . n1n4 n1n4 n1n4 . preserved preserved"
+                                                    "m1m3 m1m3 m1m3  m1m3 . n1n4 n1n4 n1n4 . preserved preserved"
+                                                    ". . . . . . . . . . ."
+                                                    "s1s4 s1s4 s1s4  s1s4 . r1r4 r1r4 r1r4 . q q"
+                                                    "s1s4 s1s4 s1s4  s1s4 . r1r4 r1r4 r1r4 . q q"
+                                ;
+                                
+                                .m1-m3{
+                                    grid-area: m1m3;
+                                    // border: 1px solid red;
+                                    display: grid;
+                                    grid-template-columns: repeat(4, 1fr);
+                                    grid-gap: 1px;
+                                    grid-template-rows: repeat(2, 1fr);
+                                    grid-template-areas: "m1 m1 m2 m3"
+                                                        "m1 m1 m4 m3"
+                                    ;
+                                    .m1{
+                                        grid-area: m1;
+                                    }
+                                    .m2{
+                                        grid-area: m2;
+                                    }
+                                    .m3{
+                                        grid-area: m3;
+                                    }
+                                    .m4{
+                                        grid-area: m4;
+                                    }
+                                }
+                                .n1-n5{
+                                    grid-area: n1n4;
+                                    grid-gap: 1px;
+                                    display: grid;
+                                    grid-template-columns: repeat(3, 1fr);
+                                    grid-template-rows: repeat(2, 1fr);
+                                    grid-template-areas: "n1 n2 n3"
+                                                        "n5 n4 n3"
+                                    ;
+                                    .n1{
+                                        grid-area: n1;
+                                    }
+                                    .n2{
+                                        grid-area: n2;
+                                    }
+                                    .n3{
+                                        grid-area: n3;
+                                    }
+                                    .n4{
+                                        grid-area: n4;
+                                    }
+                                    .n5{
+                                        grid-area: n5;
+                                    }
+                                }
+                                .preserved{
+                                    grid-area: preserved;
+                                    display: grid;
+                                    grid-template-columns: repeat(1, 1fr);
+                                    grid-template-rows: repeat(1, 1fr);
+                                    // border: 1px solid rebeccapurple;
+                                }
+                                .s1-s4{
+                                    grid-area: s1s4;
+                                    // border: 1px solid blue;
+                                    display: grid;
+                                    grid-template-columns: repeat(4, 1fr);
+                                    grid-gap: 1px;
+                                    grid-template-rows: repeat(2, 1fr);
+                                    grid-template-areas: "s1 s1 s2 s2"
+                                                        "s1 s1 s4 s3"
+                                    ;
+                                    .s1{
+                                        grid-area: s1;
+                                    }
+                                    .s2{
+                                        grid-area: s2;
+                                    }
+                                    .s4{
+                                        grid-area: s4;
+                                    }
+                                    .s5{
+                                        grid-area: s5;
+                                    }
+                                }
+                                .r1-r5{
+                                    grid-area: r1r4;
+                                    grid-template-columns: repeat(4, 1fr);
+                                    display: grid;
+                                    grid-gap: 1px;
+                                    grid-template-rows: repeat(2, 1fr);
+                                    grid-template-areas: "r1 r2 r3" "r1 r5 r4";
+                                    .r1{
+                                        grid-area: r1;
+                                    }
+                                    .r2{
+                                        grid-area: r3;
+                                    }
+                                    .r4{
+                                        grid-area: r4;
+                                    }
+                                    .r5{
+                                        grid-area: r5;
+                                    }
+                                    // border: 1px solid yellowgreen;
+                                }
+                                .q{
+                                    grid-area: q;
+                                    display: grid;
+                                    grid-template-columns: repeat(1, 1fr);
+                                    grid-template-rows: repeat(1, 1fr);
+                                    // border: 1px solid royalblue;
+                                }
+                                .input-stand-middle{
+                                    background-color: $orange;
+                                    color: $white-bg;
+                                    @include flexCentered();
+                                    flex-direction: row;
+                                    align-items: flex-start;
+                                    position: relative;
+                                    input{
+                                        z-index: -200;
+                                        position: absolute;
+                                        &:checked ~ label{
+                                            background-color: rgb(32, 161, 71);
+                                        }
+                                        &:checked ~ .cover-up-container{
+                                            background-color: rgb(32, 161, 71);
+                                        }
+                                    }
+                                    label{
+                                        cursor: pointer;
+                                        flex: 1;
+                                        @include flexCentered();
+                                        // border: 1px solid red;
+                                        height: 100%;
+                                        span{
+                                            text-align: center;
+                                            font-size: 0.9rem;
+                                        }
+                                    }
+                                }
                             }
+
+
+
+
+
+
+
+
                             .middle-row-right{
                                 // border: 1px solid green;
                                 grid-area: mrr;
@@ -1306,6 +1478,14 @@ body{
                                 flex-direction: column-reverse;
                                 align-items: flex-start;
                                 position: relative;
+                                &:first-child{
+                                    &::after{
+                                        content: "Exit";
+                                        color: $blue-black;
+                                        font-size: 0.8rem;
+                                        padding-left: 0.5rem;
+                                    }
+                                }
                                 &::after{
                                     content: "";
                                     // border: 1px solid red;
