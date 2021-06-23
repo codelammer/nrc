@@ -1072,7 +1072,8 @@ body{
         //end covid 19
 
         .stands-wrapper{
-            border: 1px solid blue;
+            // border: 1px solid blue;
+            
             padding: 0 4rem;
             position: absolute;
             top: 0;
@@ -1080,12 +1081,285 @@ body{
             right: 0;
             left: 0;
             form{
-                border: 1px solid red;
+                // border: 1px solid red;
                 height: 100%;
                 display: flex;
                 .exhibition-stands{
                     flex: 8;
-                    border: 1px solid rebeccapurple;
+                    display: flex;
+                    flex-direction: column;
+                    // border: 1px solid rebeccapurple;
+
+                    .exhibition-stands-header{
+                        flex: 0;
+                        h1{
+                            font-size: 1.5rem;
+                            color: $blue;
+                            font-family: san-francisco-bold;
+                            letter-spacing: 1px;
+                            margin-bottom: 0.5rem;                            
+                        }
+                        h2{
+                            font-size: 1rem;
+                            color: $orange;
+                            font-family: san-francisco-light;
+
+                        }
+                        h3{
+                            font-size: .8rem;
+                            color: $primary-blue;
+                        }
+                    }
+                    .stands-layout{
+                        box-shadow: 0px 0px 10px 5px rgba(58, 58, 58, 0.295);
+                        border-radius: 1rem;
+                        overflow: hidden;
+                        margin: 1rem 0;
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        background-color: $white-bg;
+                        // border: 1px solid red;
+                        .input-stand-top{
+                            height: 6rem;
+                            background-color: $blue;
+                            color: $white-bg;
+                            @include flexCentered();
+                            flex-direction: column;
+                            align-items: flex-start;
+                            position: relative;
+                            &::after{
+                                content: "";
+                                // border: 1px solid red;
+                                background-color: $white-bg;
+                                flex: 1;
+                                width: 100%;
+                            }
+                            &:first-child{
+                                label{
+                                    span{
+                                        font-size: 0.8rem;
+                                    }
+                                }
+                            }
+                            &:last-child{
+                                &::after{
+                                    flex: 0;
+                                }
+                            }
+                            .cover-up-container{
+                                // border: 1px solid green;
+                                flex: 1;
+                                width: 100%;
+                                display: flex;
+                                span{
+                                    height: 100%;
+                                }
+                                .cover-up-container-left{
+                                    // border: 1px solid red;
+                                    flex: 0 0 0.5rem;
+                                    background-color: $white-bg;
+                                }
+                                .cover-up-container-right{
+                                    flex: 1;
+                                }
+                            }
+                            input{
+                                z-index: -200;
+                                position: absolute;
+                                &:checked ~ label{
+                                    background-color: rgb(32, 161, 71);
+                                }
+                                &:checked ~ .cover-up-container{
+                                    background-color: rgb(32, 161, 71);
+                                }
+                            }
+                            label{
+                                cursor: pointer;
+                                width: 100%;
+                                flex: 3;
+                                @include flexCentered();
+                                span{
+                                    text-align: center;
+                                    font-size: 0.9rem;
+                                }
+                            }
+                        }
+                        .upper-row{
+                            flex: 0;
+                            // border: 1px solid blue;
+                            // overflow: hidden;
+                            margin-bottom: 1px;
+                            display: grid;
+                            grid-template-columns: repeat(11, 1fr);
+                            grid-gap: 0.1rem;
+                        }
+
+                        .middle-row{
+                            flex: 1;
+                            // border: 1px solid greenyellow;
+                            display: grid;
+                            grid-template-columns: repeat(11, 1fr);
+                            grid-template-rows: repeat(3, 1fr);
+                            grid-gap: 0.1rem;
+                            grid-template-areas: "mrl mrm mrm mrm mrm mrm mrm mrm mrm mrm mrr"
+                                        "mrl mrm mrm mrm mrm mrm mrm mrm mrm mrm mrr"
+                                        "mrl mrm mrm mrm mrm mrm mrm mrm mrm mrm mrr"
+                            ;
+                            .middle-row-left{
+                                // border: 1px solid red;
+                                grid-area: mrl;
+                                display: grid;
+                                grid-template-rows: repeat(4, 1fr);
+                                grid-gap: 1px;
+                                .input-stand-right{
+                                    background-color: $blue;
+                                    color: $white-bg;
+                                    @include flexCentered();
+                                    flex-direction: row;
+                                    align-items: flex-start;
+                                    position: relative;
+                                    input{
+                                        z-index: -200;
+                                        position: absolute;
+                                        &:checked ~ label{
+                                            background-color: rgb(32, 161, 71);
+                                        }
+                                        &:checked ~ .cover-up-container{
+                                            background-color: rgb(32, 161, 71);
+                                        }
+                                    }
+                                    label{
+                                        cursor: pointer;
+                                        flex: 1;
+                                        @include flexCentered();
+                                        // border: 1px solid red;
+                                        height: 100%;
+                                        span{
+                                            text-align: center;
+                                            font-size: 0.9rem;
+                                        }
+                                    }
+                                }
+                            }
+                            .middle-row-middle{
+                                // border: 1px solid blue;
+                                grid-area: mrm;
+                            }
+                            .middle-row-right{
+                                // border: 1px solid green;
+                                grid-area: mrr;
+                                display: grid;
+                                grid-template-rows: repeat(3, 1fr);
+                                grid-gap: 1px;
+                                .input-stand-right{
+                                    background-color: $blue;
+                                    color: $white-bg;
+                                    @include flexCentered();
+                                    flex-direction: row-reverse;
+                                    align-items: flex-start;
+                                    position: relative;
+                                    &::after{
+                                        content: "";
+                                        // border: 1px solid red;
+                                        height: 100%;
+                                        background-color: $white-bg;
+                                        flex: 0 0 0.5rem;
+                                    }
+                                    input{
+                                        z-index: -200;
+                                        position: absolute;
+                                        &:checked ~ label{
+                                            background-color: rgb(32, 161, 71);
+                                        }
+                                        &:checked ~ .cover-up-container{
+                                            background-color: rgb(32, 161, 71);
+                                        }
+                                    }
+                                    label{
+                                        cursor: pointer;
+                                        flex: 1;
+                                        @include flexCentered();
+                                        // border: 1px solid red;
+                                        height: 100%;
+                                        span{
+                                            text-align: center;
+                                            font-size: 0.9rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .lower-row{
+                            flex: 0;
+                            margin-top: 1px;
+                            border: 1px solid rebeccapurplexxx;
+                            display: grid;
+                            grid-gap: 0.1rem;
+                            grid-template-columns: repeat(11, 1fr);
+                            .input-stand-bottom{
+                                height: 6rem;
+                                background-color: $blue;
+                                color: $white-bg;
+                                @include flexCentered();
+                                flex-direction: column-reverse;
+                                align-items: flex-start;
+                                position: relative;
+                                &::after{
+                                    content: "";
+                                    // border: 1px solid red;
+                                    background-color: $white-bg;
+                                    flex: 1;
+                                    width: 100%;
+                                }
+                                &:last-child{
+                                    &::after{
+                                        flex: 0;
+                                    }
+                                }
+                                .cover-up-container{
+                                    // border: 1px solid green;
+                                    flex: 1;
+                                    width: 100%;
+                                    display: flex;
+                                    span{
+                                        height: 100%;
+                                    }
+                                    .cover-up-container-left{
+                                        // border: 1px solid red;
+                                        flex: 0 0 0.5rem;
+                                        background-color: $white-bg;
+                                    }
+                                    .cover-up-container-right{
+                                        flex: 7;
+                                    }
+                                }
+                                input{
+                                    z-index: -200;
+                                    position: absolute;
+                                    &:checked ~ label{
+                                        background-color: rgb(32, 161, 71);
+                                    }
+                                    &:checked ~ .cover-up-container{
+                                        background-color: rgb(32, 161, 71);
+                                    }
+                                }
+                                label{
+                                    cursor: pointer;
+                                    width: 100%;
+                                    flex: 3;
+                                    @include flexCentered();
+                                    span{
+                                        text-align: center;
+                                        font-size: 0.9rem;
+                                    }
+                                }
+                            }
+                        }
+
+
+                    }
                 }
                 .confirm-exhibition{
                     background-color: white;
