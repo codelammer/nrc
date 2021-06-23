@@ -2330,9 +2330,10 @@ body main .stands-wrapper form .confirm-exhibition .your-selection .cards-select
 }
 
 body main .stands-wrapper form .confirm-exhibition .your-selection .cards-selection .selected-card {
+  cursor: pointer;
   -webkit-box-shadow: 0px 0px 10px 3px rgba(49, 49, 49, 0.212);
           box-shadow: 0px 0px 10px 3px rgba(49, 49, 49, 0.212);
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -40,18 +40,17 @@
             </div>
 
         <div class="stands-wrapper">
-            <form action="#">
+            <form action="#" onsubmit="handleForm()">
                 <div class="exhibition-stands">
                     <div class="exhibition-stands-header">
                         <h1>exhibition Booking</h1>
-                        <h2>Select a stand from the available spaces in the floor plan.</h2>
+                        <h2>Click a stand from the available spaces in the floor plan to select or deselect.</h2>
                         <h3>Click on the proceed button once you have made your selections.</h3>
                     </div>
                     <div class="stands-layout">
                         <div class="upper-row">
 
                             <div class="input-stand-top">
-                                <input type="checkbox" name="ExhibitionStand[]" id="l1" value="L1">
                                 <label class="input-stand-selection" for="l1">
                                     <span>Registration Desk</span>
                                 </label>
@@ -225,7 +224,6 @@
 
                                 <div class="preserved">
                                     <div class="input-stand-middle p">
-                                        <input type="checkbox" name="ExhibitionStand[]" id="p" value="p">
                                         <label class="input-stand-selection" for="p">
                                             <span>Preserved</span>
                                         </label>
@@ -431,22 +429,8 @@
                     </div>
                     <div class="your-selection">
                         <h1>Your selection</h1>
-                        <div class="cards-selection">
-                            <div class="selected-card">
-                                <p>l5</p>
-                                <i class="fi-rr-cursor-finger"></i>
-                                <i class="fi-rr-add"></i>
-                            </div>
-                            <div class="selected-card">
-                                <p>l5</p>
-                                <i class="fi-rr-cursor-finger"></i>
-                                <i class="fi-rr-add"></i>
-                            </div>
-                            <div class="selected-card">
-                                <p>l5</p>
-                                <i class="fi-rr-cursor-finger"></i>
-                                <i class="fi-rr-add"></i>
-                            </div>
+                        <div class="cards-selection" id="your-selections">
+
                         </div>
                     </div>
                     <div class="submit-stand">

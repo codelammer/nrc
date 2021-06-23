@@ -109,4 +109,85 @@ if (window.location.href.indexOf("donate") > -1) {
 }
 
 
+if (window.location.href.indexOf("select_stand") > -1) {
+    let checkedStands = [];
+    let checkedStandsDisplayWrapper = document.querySelector('#your-selections');
+
+
+    let checkboxesElement = document.getElementsByTagName('input');
+    let checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+
+
+
+    const appendCardSelection = (standValue) =>{
+        checkedStandsDisplayWrapper.innerHTML += `
+
+            <div class="selected-card">
+                <p>${standValue}</p>
+                <i class="fi-rr-cursor-finger"></i>
+                <i class="fi-rr-add"></i>
+            </div>
+        
+        `;
+
+    }
+
+    const deleteCardSelection = (value) =>{
+        for (let i = 0; i < checkedStands.length; i++) {
+            if(checkedStandsDisplayWrapper.children[i] != undefined){
+                for (let j = 0; j < checkedStandsDisplayWrapper.children[i].children.length; j++) {
+                    if (checkedStandsDisplayWrapper.children[i] != undefined) {
+    
+                        if(checkedStandsDisplayWrapper.children[i].children[0].textContent == value){
+                            checkedStandsDisplayWrapper.children[i].remove(); 
+                        } 
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+    for (let i = 0; i < checkboxesElement.length; i++) {
+        checkboxesElement[i].addEventListener('click', () => {
+            if (checkboxesElement[i].checked) {
+                checkedStands.push(checkboxesElement[i].value);
+                appendCardSelection(checkboxesElement[i].value);
+            }
+            else{
+                for (let j = 0; j < checkedStands.length; j++) {
+                    //remove array if unchecked
+                    if (checkboxesElement[i].value == checkedStands[j]) {
+                        checkedStands = checkedStands.filter(item => {
+                            deleteCardSelection(checkboxesElement[i].value);
+                            return item != checkboxesElement[i].value;
+                        });
+                    }
+                }
+            }
+
+            // console.log("---------------");
+            // for (let i = 0; i < checkedStands.length; i++) {
+            //     console.log(`huh : ${checkedStands[i]}`);
+                
+            // }
+            // console.log("---------------");
+        });
+    }
+    
+
+    // const handleForm = () => {
+    //     let array = [];
+        
+    //     console.log();
+    // }
+
+
+
+}
+
+
 
