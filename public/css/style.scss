@@ -132,6 +132,32 @@ body{
                 }
             }
         }
+        .logged-in{
+            ul{
+                li{
+                    a{
+                        display: flex;
+                        align-items: center;
+                        i{
+                            font-size: 1.5rem;
+                            display: flex;
+                        }
+                        span{
+                            margin-left: 1rem;
+                            height: 2.5rem;
+                            width: 2.5rem;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            @include flexCentered();
+                            img{
+                                height: 2.6rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
         input{
             display: none;
         }
@@ -1045,7 +1071,118 @@ body{
         }
         //end covid 19
 
+        .stands-wrapper{
+            border: 1px solid blue;
+            padding: 0 4rem;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            form{
+                border: 1px solid red;
+                height: 100%;
+                display: flex;
+                .exhibition-stands{
+                    flex: 8;
+                    border: 1px solid rebeccapurple;
+                }
+                .confirm-exhibition{
+                    background-color: white;
+                    box-shadow: 0px 0px 10px 3px rgba(49, 49, 49, 0.212);
+                    margin-bottom: 2rem;
+                    margin-left: 2rem;
+                    border-radius: 1rem;
+                    flex: 3;
+                    // border: 1px solid red;
+                    display: flex;
+                    flex-direction: column;
+                    h1{
+                        font-size: 1.5rem;
+                        color: $blue;
+                    }
+                    .confirm-exhibition-header{
+                        color: $blue;
+                        margin: 1rem 2rem;
+                        p{
+                            margin-top: 1rem;
+                            font-size: 3rem;
+                            border-bottom: 1px solid rgba(99, 99, 99, 0.308);
+                            i{
+                                color: $light-black;
+                            }
+                        }
+                    }
 
+                    .your-selection{
+                        // border: 1px solid green;
+                        flex: 1;
+                        margin: 0 1rem;
+                        padding: 1rem;
+                        overflow-x: hidden;
+                        overflow-y: auto;
+                        h1{
+                            margin-bottom: 1rem;
+                        }
+                        .cards-selection{                            
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            grid-gap: 1rem;
+                        }
+                        .selected-card{
+                            // border: 1px solid green;
+                            box-shadow: 0px 0px 10px 3px rgba(49, 49, 49, 0.212);
+                            font-size: 2.5rem;
+                            display: flex;
+                            align-items: center;
+                            position: relative;
+                            border-radius: 10px;
+                            p{
+                                margin: 1rem;
+                                color: $orange;
+                            }
+                            i{
+                                color: $light-black;
+                                &:last-child{
+                                    color: rgb(231, 68, 68);
+                                    position: absolute;
+                                    // border: 1px solid red;
+                                    padding: 0.3rem;
+                                    border-radius: 50%;
+                                    background-color: white;
+                                    font-size: 1.8rem;
+                                    transform: rotate(45deg);
+                                    @include flexCentered();
+                                    bottom: 70%;
+                                    left: 80%;
+                                }
+                            }
+                        }
+                    }
+                    .submit-stand{
+                        flex: 0;
+                        // border: 1px solid red;
+                        display: flex;
+                        justify-content: center;
+                        button{
+                            margin: 1rem;
+                            padding: 0.5rem 1rem;
+                            font-size: 1rem;
+                            background-color: $green;
+                            border-radius: 10rem;
+                            border: none;
+                            outline: none;
+                            color: white;
+                            transition: background-color 0.5s ease;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: rgb(10, 107, 10);
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
     }
 }
