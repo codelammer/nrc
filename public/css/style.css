@@ -1584,7 +1584,7 @@ body main .stands-wrapper form .exhibition-stands .stands-layout {
 
 body main .stands-wrapper form .exhibition-stands .stands-layout .input-stand-top {
   height: 6rem;
-  background-color: #2069ad;
+  background-image: linear-gradient(4deg, #2069ad, #398ebe);
   color: #fafafa;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1739,7 +1739,7 @@ body main .stands-wrapper form .exhibition-stands .stands-layout .middle-row .mi
 }
 
 body main .stands-wrapper form .exhibition-stands .stands-layout .middle-row .middle-row-left .input-stand-right {
-  background-color: #2069ad;
+  background-image: linear-gradient(4deg, #2069ad, #257fb3);
   color: #fafafa;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2014,6 +2014,7 @@ body main .stands-wrapper form .exhibition-stands .stands-layout .middle-row .mi
 
 body main .stands-wrapper form .exhibition-stands .stands-layout .middle-row .middle-row-middle .input-stand-middle {
   background-color: #e07a27;
+  background-image: linear-gradient(135deg, #e07a27, #c0731c);
   color: #fafafa;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2082,7 +2083,7 @@ body main .stands-wrapper form .exhibition-stands .stands-layout .middle-row .mi
 }
 
 body main .stands-wrapper form .exhibition-stands .stands-layout .middle-row .middle-row-right .input-stand-right {
-  background-color: #2069ad;
+  background-image: linear-gradient(4deg, #2069ad, #257fb3);
   color: #fafafa;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2162,7 +2163,7 @@ body main .stands-wrapper form .exhibition-stands .stands-layout .lower-row {
 
 body main .stands-wrapper form .exhibition-stands .stands-layout .lower-row .input-stand-bottom {
   height: 6rem;
-  background-color: #2069ad;
+  background-image: linear-gradient(4deg, #2069ad, #257fb3);
   color: #fafafa;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2328,7 +2329,7 @@ body main .stands-wrapper form .confirm-exhibition .your-selection .cards-select
   grid-gap: 1rem;
 }
 
-body main .stands-wrapper form .confirm-exhibition .your-selection .selected-card {
+body main .stands-wrapper form .confirm-exhibition .your-selection .cards-selection .selected-card {
   -webkit-box-shadow: 0px 0px 10px 3px rgba(49, 49, 49, 0.212);
           box-shadow: 0px 0px 10px 3px rgba(49, 49, 49, 0.212);
   font-size: 2.5rem;
@@ -2342,16 +2343,16 @@ body main .stands-wrapper form .confirm-exhibition .your-selection .selected-car
   border-radius: 10px;
 }
 
-body main .stands-wrapper form .confirm-exhibition .your-selection .selected-card p {
+body main .stands-wrapper form .confirm-exhibition .your-selection .cards-selection .selected-card p {
   margin: 1rem;
   color: #e07a27;
 }
 
-body main .stands-wrapper form .confirm-exhibition .your-selection .selected-card i {
+body main .stands-wrapper form .confirm-exhibition .your-selection .cards-selection .selected-card i {
   color: #686868;
 }
 
-body main .stands-wrapper form .confirm-exhibition .your-selection .selected-card i:last-child {
+body main .stands-wrapper form .confirm-exhibition .your-selection .cards-selection .selected-card i:last-child {
   color: #e74444;
   position: absolute;
   padding: 0.3rem;

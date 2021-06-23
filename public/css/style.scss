@@ -1118,10 +1118,11 @@ body{
                         display: flex;
                         flex-direction: column;
                         background-color: $white-bg;
+                        
                         // border: 1px solid red;
                         .input-stand-top{
                             height: 6rem;
-                            background-color: $blue;
+                            background-image: linear-gradient(4deg, $blue, rgb(57, 142, 190));
                             color: $white-bg;
                             @include flexCentered();
                             flex-direction: column;
@@ -1221,7 +1222,7 @@ body{
                                 grid-template-rows: repeat(4, 1fr);
                                 grid-gap: 1px;
                                 .input-stand-right{
-                                    background-color: $blue;
+                                    background-image: linear-gradient(4deg, $blue, rgb(37, 127, 179));
                                     color: $white-bg;
                                     @include flexCentered();
                                     flex-direction: row;
@@ -1382,6 +1383,7 @@ body{
                                 }
                                 .input-stand-middle{
                                     background-color: $orange;
+                                    background-image: linear-gradient(135deg, $orange, rgb(192, 115, 28));
                                     color: $white-bg;
                                     @include flexCentered();
                                     flex-direction: row;
@@ -1425,7 +1427,7 @@ body{
                                 grid-template-rows: repeat(3, 1fr);
                                 grid-gap: 1px;
                                 .input-stand-right{
-                                    background-color: $blue;
+                                    background-image: linear-gradient(4deg, $blue, rgb(37, 127, 179));
                                     color: $white-bg;
                                     @include flexCentered();
                                     flex-direction: row-reverse;
@@ -1472,7 +1474,7 @@ body{
                             grid-template-columns: repeat(11, 1fr);
                             .input-stand-bottom{
                                 height: 6rem;
-                                background-color: $blue;
+                                background-image: linear-gradient(4deg, $blue, rgb(37, 127, 179));
                                 color: $white-bg;
                                 @include flexCentered();
                                 flex-direction: column-reverse;
@@ -1582,33 +1584,33 @@ body{
                             display: grid;
                             grid-template-columns: repeat(2, 1fr);
                             grid-gap: 1rem;
-                        }
-                        .selected-card{
-                            // border: 1px solid green;
-                            box-shadow: 0px 0px 10px 3px rgba(49, 49, 49, 0.212);
-                            font-size: 2.5rem;
-                            display: flex;
-                            align-items: center;
-                            position: relative;
-                            border-radius: 10px;
-                            p{
-                                margin: 1rem;
-                                color: $orange;
-                            }
-                            i{
-                                color: $light-black;
-                                &:last-child{
-                                    color: rgb(231, 68, 68);
-                                    position: absolute;
-                                    // border: 1px solid red;
-                                    padding: 0.3rem;
-                                    border-radius: 50%;
-                                    background-color: white;
-                                    font-size: 1.8rem;
-                                    transform: rotate(45deg);
-                                    @include flexCentered();
-                                    bottom: 70%;
-                                    left: 80%;
+                            .selected-card{
+                                // border: 1px solid green;
+                                box-shadow: 0px 0px 10px 3px rgba(49, 49, 49, 0.212);
+                                font-size: 2.5rem;
+                                display: flex;
+                                align-items: center;
+                                position: relative;
+                                border-radius: 10px;
+                                p{
+                                    margin: 1rem;
+                                    color: $orange;
+                                }
+                                i{
+                                    color: $light-black;
+                                    &:last-child{
+                                        color: rgb(231, 68, 68);
+                                        position: absolute;
+                                        // border: 1px solid red;
+                                        padding: 0.3rem;
+                                        border-radius: 50%;
+                                        background-color: white;
+                                        font-size: 1.8rem;
+                                        transform: rotate(45deg);
+                                        @include flexCentered();
+                                        bottom: 70%;
+                                        left: 80%;
+                                    }
                                 }
                             }
                         }
