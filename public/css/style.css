@@ -2626,10 +2626,11 @@ body footer .socials a i {
             flex-direction: column-reverse;
   }
   body main .main-wrapper .landing-view .left-content {
-    -webkit-box-flex: 0;
-        -ms-flex: 0;
-            flex: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     padding: 0px 1rem;
+    margin-bottom: 3rem;
   }
   body main .main-wrapper .landing-view .left-content .big-display h1 {
     font-size: 2rem;
@@ -2649,14 +2650,15 @@ body footer .socials a i {
     margin-bottom: 2rem;
   }
   body main .main-wrapper .landing-view .right-illustration {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
     padding: unset !important;
     position: relative;
   }
   body main .main-wrapper .landing-view .right-illustration img {
     position: absolute;
+    margin: unset;
     top: 0px;
     width: 100%;
     z-index: -5;
@@ -2816,6 +2818,9 @@ body footer .socials a i {
   }
   body main .stands-wrapper form .exhibition-stands .stands-layout {
     min-height: 20rem;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    margin: 3rem 0;
   }
   body main .stands-wrapper form .exhibition-stands .stands-layout .upper-row .input-stand-top:first-child {
     overflow: hidden;

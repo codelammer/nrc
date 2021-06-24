@@ -272,7 +272,7 @@ body {
           }
         }
         .right-illustration {
-          //border: 1px solid rgb(103, 207, 17);
+          // border: 1px solid rgb(103, 207, 17);
           flex: 1;
           padding: 3rem;
           @include flexCentered();
@@ -1765,8 +1765,9 @@ body {
           flex-direction: column-reverse;
           .left-content {
             // border: 1px solid red;
-            flex: 0;
+            flex: 1;
             padding: 0px 1rem;
+            margin-bottom: 3rem;
             .big-display {
               h1 {
                 font-size: 2rem;
@@ -1784,12 +1785,13 @@ body {
           }
           .right-illustration {
             // border: 1px solid greenyellow;
-            flex: 1;
+            flex: 0;
             padding: unset !important;
             // overflow: hidden;
             position: relative;
             img {
               position: absolute;
+              margin: unset;
               top: 0px;
               width: 100%;
               z-index: -5;
@@ -1951,6 +1953,8 @@ body {
           .exhibition-stands {
             .stands-layout {
               min-height: 20rem;
+              transform: rotate(90deg);
+              margin: 3rem 0;
               .upper-row {
                 .input-stand-top {
                   &:first-child {
