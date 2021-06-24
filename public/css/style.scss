@@ -264,9 +264,13 @@ body{
                     }
                     .btns-wrapper{
                         display:  flex;
-                        button{                           
-                            align-items: center;                            
+                        a{                           
+                            align-items: center; 
+                            text-decoration: none;                           
                             background-color: transparent;
+                            border-radius: 10rem;
+                            padding: 1rem 2rem;
+                            font-size: 1.3rem;
                             border: 1px solid $black;
                             color: $black;
                             &:hover{

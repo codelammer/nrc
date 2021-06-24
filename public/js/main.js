@@ -6,6 +6,7 @@ let headerNav = _getEl('header');
 let navAnchorTags = document.querySelector("#nav-list").querySelectorAll("a");
 let currentLoc = location.href;
 
+//loop through the navigation tag so as to change the active navigation class
 navAnchorTags.forEach((element) => {
     console.log(element.href);
     if(element.href == currentLoc){   
@@ -133,18 +134,28 @@ if (window.location.href.indexOf("select_stand") > -1) {
     }
 
     const deleteCardSelection = (value) =>{
-        for (let i = 0; i < checkedStands.length; i++) {
+        let checkedCountChildren = checkedStandsDisplayWrapper.children.length;
+        
+        for (let i = 0; i < checkedCountChildren; i++) {
             if(checkedStandsDisplayWrapper.children[i] != undefined){
-                for (let j = 0; j < checkedStandsDisplayWrapper.children[i].children.length; j++) {
-                    if (checkedStandsDisplayWrapper.children[i] != undefined) {
-    
+
+                let checkedCountChildrenChildren = checkedStandsDisplayWrapper.children[i].children.length;
+
+                for (let j = 0; j < checkedCountChildrenChildren; j++) {
+                    if (checkedStandsDisplayWrapper.children[i] != undefined) {    
                         if(checkedStandsDisplayWrapper.children[i].children[0].textContent == value){
                             checkedStandsDisplayWrapper.children[i].remove(); 
+                            checkedCountChildrenChildren--;
                         } 
                     }
                 }
             }
         }
+
+
+
+
+        
     }
 
 
@@ -157,7 +168,7 @@ if (window.location.href.indexOf("select_stand") > -1) {
                 checkedStands.push(checkboxesElement[i].value);
                 appendCardSelection(checkboxesElement[i].value);
             }
-            else{
+            else if (!checkboxesElement[i].checked){
                 for (let j = 0; j < checkedStands.length; j++) {
                     //remove array if unchecked
                     if (checkboxesElement[i].value == checkedStands[j]) {
@@ -168,13 +179,6 @@ if (window.location.href.indexOf("select_stand") > -1) {
                     }
                 }
             }
-
-            // console.log("---------------");
-            // for (let i = 0; i < checkedStands.length; i++) {
-            //     console.log(`huh : ${checkedStands[i]}`);
-                
-            // }
-            // console.log("---------------");
         });
     }
     

@@ -359,16 +359,20 @@ body main .main-wrapper .landing-view .left-content .btns-wrapper {
   display: flex;
 }
 
-body main .main-wrapper .landing-view .left-content .btns-wrapper button {
+body main .main-wrapper .landing-view .left-content .btns-wrapper a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-decoration: none;
   background-color: transparent;
+  border-radius: 10rem;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
   border: 1px solid #0e121b;
   color: #0e121b;
 }
 
-body main .main-wrapper .landing-view .left-content .btns-wrapper button:hover {
+body main .main-wrapper .landing-view .left-content .btns-wrapper a:hover {
   background-color: #0e121b;
   color: #fafafa;
 }
