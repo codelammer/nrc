@@ -37,4 +37,36 @@ body{
             width: 100%;
         }
     }
+
+}
+
+@media screen and (max-width: 700px) {
+    body{
+        header{
+            .venue-walkthrough-nav{
+                .brand-name{
+                    background-color: transparent !important;
+                    // border: 1px solid green;
+                }
+                ul{
+                    opacity: 70%;
+                    li{
+                        a{
+                            color: rgb(19, 27, 70);
+                            &:hover{
+                                color: rgb(230, 151, 32);
+                            }
+                        }
+                    }
+                }            
+            }
+        }
+        .vid-wrapper{
+            @include flexcentered();
+            video{
+                height: 100%;
+                width: unset;
+            }
+        }        
+    }    
 }

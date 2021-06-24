@@ -76,7 +76,7 @@ if (window.location.href.indexOf("sign-up") > -1) {
 }
 
 
-
+//pull items from the dom only if in the donate page
 if (window.location.href.indexOf("donate") > -1) {
     
     paypal.Buttons(
@@ -109,7 +109,7 @@ if (window.location.href.indexOf("donate") > -1) {
     ).render('#paypal-button');
 }
 
-
+//pull items from the dom only if in the select_stand page
 if (window.location.href.indexOf("select_stand") > -1) {
     let checkedStands = [];
     let checkedStandsDisplayWrapper = document.querySelector('#your-selections');
@@ -133,6 +133,7 @@ if (window.location.href.indexOf("select_stand") > -1) {
 
     }
 
+    //remove the unchecked item
     const deleteCardSelection = (value) =>{
         let checkedCountChildren = checkedStandsDisplayWrapper.children.length;
         
@@ -161,7 +162,7 @@ if (window.location.href.indexOf("select_stand") > -1) {
 
 
 
-
+    //add event listener to all those stands so that on select handle event
     for (let i = 0; i < checkboxesElement.length; i++) {
         checkboxesElement[i].addEventListener('click', () => {
             if (checkboxesElement[i].checked) {
@@ -184,7 +185,8 @@ if (window.location.href.indexOf("select_stand") > -1) {
     
 
     // const handleForm = () => {
-    //     let array = [];
+    //      when submitting the form check this array => checkedStands
+    //      use that array as it contains all the selected stands 
         
     //     console.log();
     // }

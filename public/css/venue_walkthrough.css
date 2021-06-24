@@ -34,4 +34,34 @@ body .vid-wrapper {
 body .vid-wrapper video {
   width: 100%;
 }
+
+@media screen and (max-width: 700px) {
+  body header .venue-walkthrough-nav .brand-name {
+    background-color: transparent !important;
+  }
+  body header .venue-walkthrough-nav ul {
+    opacity: 70%;
+  }
+  body header .venue-walkthrough-nav ul li a {
+    color: #131b46;
+  }
+  body header .venue-walkthrough-nav ul li a:hover {
+    color: #e69720;
+  }
+  body .vid-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .vid-wrapper video {
+    height: 100%;
+    width: unset;
+  }
+}
 /*# sourceMappingURL=venue_walkthrough.css.map */
