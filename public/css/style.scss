@@ -165,7 +165,6 @@ body {
   main {
     // border: 1px solid green;
     position: relative;
-
     // Start HOME PAGE
     .bg-div {
       height: calc((var(--vh) * 100) - (var(--hH) * 100));
@@ -190,98 +189,160 @@ body {
     }
 
     .main-wrapper {
-      // border: 3px solid rebeccapurple;
+      // border: 1px solid red;
       z-index: 0;
       position: absolute;
       top: 0px;
       right: 0px;
       left: 0px;
-      right: 0px;
       display: flex;
-      flex-direction: column;
-      overflow-y: auto;
-      .landing-view {
-        // border: 1px solid red;
-        width: 100%;
+      overflow: hidden;
+      width: 100%;
+      display: flex;
+      .slides-wrapper{
         display: flex;
-        height: calc((var(--vh) * 100) - (var(--hH) * 100));
-        .left-content {
-          // border: 1px solid blue;
-          flex: 1;
-          padding: 0 4rem;
+        flex-flow: row;
+        transition: transform 1s ease;
+        .slide-item{
+            height: calc((var(--vh) * 100) - (var(--hH) * 100));
+            // border: 1px solid black;
+            flex: 0 0 calc(var(--vw) * 100);
+            overflow: hidden;
+            &:not(:nth-child(1)){
+              position: relative;
+              filter: brightness(50%);
+              @include flexCentered();
+            }
+            img{
+              width: 90rem;
+            }  
+          }
+      }
+
+
+        .left-arrow{
+          position: absolute;
+          // border: 1px solid yellow;
+          pointer-events: none;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
           display: flex;
-          flex-direction: column;
-          justify-content: center;
-          .big-display {
-            h1 {
-              font-size: 3.5rem;
-              line-height: 3.3rem;
+          font-size: 3rem;
+          color: $white-bg;
+          align-items: center;
+          i{
+            pointer-events: auto;
+            cursor: pointer;
+            display: flex;
+            // border: 1px solid red;
+            transition: color 0.5s ease;
+            &:hover{
+              color: #2f787e;
+            }
+          }
+        }
+        .right-arrow{
+          position: absolute;
+          // border: 1px solid red;
+          pointer-events: none;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          font-size: 3rem;
+          color: $white-bg;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          i{
+            pointer-events: auto;
+            cursor: pointer;
+            display: flex;
+            // border: 1px solid red;
+            transition: color 0.5s ease;
+            &:hover{
+              color: #2f787e;
+            }
+          }
+        }
+
+
+
+
+
+
+
+
+
+
+        .landing-view {
+          // border: 1px solid red;
+          width: 100%;
+          height: calc((var(--vh) * 100) - (var(--hH) * 100));
+          display: flex;
+          .left-content {
+            // border: 1px solid blue;
+            flex: 1;
+            padding: 0 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .big-display {
+              flex: 1;
               display: flex;
-              flex-direction: column;
-              margin: 3rem 0rem;
-              color: $black;
-              font-family: san-francisco-medium;
-              span {
-                font-family: san-francisco-bold;
-                &:nth-child(1) {
-                  font-family: san-francisco-light;
+              align-items: flex-end;
+              h1 {
+                font-size: 3.2rem;
+                line-height: 3.3rem;
+                display: flex;
+                flex-direction: column;
+                // margin: 3rem 0rem;
+                color: $black;
+                font-family: san-francisco-medium;
+                span {
+                  font-family: san-francisco-bold;
+                  &:nth-child(1) {
+                    font-family: san-francisco-light;
+                  }
+                }
+              }
+            }
+            .btns-wrapper {
+              // border: 1px solid red;
+              flex: 0 0 12rem;
+              @include flexCentered();
+              justify-content: flex-start;
+              a {
+                align-items: center;
+                text-decoration: none;
+                background-color: transparent;
+                border-radius: 10rem;
+                padding: 1rem 2rem;
+                font-size: 1.3rem;
+                border: 1px solid $black;
+                color: $black;
+                &:hover {
+                  background-color: $black;
+                  color: $white-bg;
                 }
               }
             }
           }
-          button {
-            align-self: flex-start;
-            background-color: $white-bg;
-            outline: none;
-            border: none;
-            margin-right: 2rem;
-            padding: 1rem 2rem;
-            border-radius: 10rem;
-            font-size: 1.3rem;
-            display: flex;
-            color: $light-black;
-            cursor: pointer;
-            transition: background-color 0.5s ease;
-            box-shadow: 0px 0px 5px 3px #8686864d;
-            i {
-              display: flex;
-              @include flexCentered();
-              margin-left: 0.5rem;
-            }
-            &:hover {
-              background-color: $orange;
-              color: $white-bg;
+          .right-illustration {
+            // border: 1px solid rgb(103, 207, 17);
+            flex: 1;
+            padding: 3rem;
+            @include flexCentered();
+            img {
+              // border: 1px solid red;
+              height: 100%;
+              width: unset;
             }
           }
-          .btns-wrapper {
-            display: flex;
-            a {
-              align-items: center;
-              text-decoration: none;
-              background-color: transparent;
-              border-radius: 10rem;
-              padding: 1rem 2rem;
-              font-size: 1.3rem;
-              border: 1px solid $black;
-              color: $black;
-              &:hover {
-                background-color: $black;
-                color: $white-bg;
-              }
-            }
-          }
-        }
-        .right-illustration {
-          // border: 1px solid rgb(103, 207, 17);
-          flex: 1;
-          padding: 3rem;
-          @include flexCentered();
-          img {
-            height: 100%;
-          }
-        }
       }
-    }
+      } 
 
     .btm {
       // border: 1px solid green;

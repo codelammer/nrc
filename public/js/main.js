@@ -5,6 +5,8 @@ const _getEl = (el) => {
 let headerNav = _getEl('header');
 let navAnchorTags = document.querySelector("#nav-list").querySelectorAll("a");
 let currentLoc = location.href;
+let slidesWrapper = _getEl('slides-wrapper');
+
 
 //loop through the navigation tag so as to change the active navigation class
 navAnchorTags.forEach((element) => {
@@ -20,17 +22,58 @@ navAnchorTags.forEach((element) => {
 //change active class
 let hH = `${headerNav.offsetHeight * 0.01}px`;
 let vh = `${window.innerHeight * 0.01}px`;
+let vw = `${window.innerWidth * 0.01}px`;
+console.log(window.innerWidth);
+
+
 document.documentElement.style.setProperty("--vh", vh);
 document.documentElement.style.setProperty("--hH", hH);
+document.documentElement.style.setProperty("--vw", vw);
 
 
 window.addEventListener('resize', ()=>{
     let vh = `${window.innerHeight * 0.01}px`;
     document.documentElement.style.setProperty("--vh", vh);
     document.documentElement.style.setProperty("--hH", hH);
-    
+    document.documentElement.style.setProperty("--vw", vw);
 });
 
+//carouselle
+let position = 0;
+let counter = 1;
+
+
+const nextSlider = () => {
+    if (counter !== slidesWrapper.children.length) {
+        console.log(`counter is: ${counter}`);
+        console.log(`slides wrapper length is: ${slidesWrapper.children.length}`);
+        slidesWrapper.style.transform = `translateX(-${window.innerWidth * counter}px)`;
+        counter++;        
+    }else{
+        console.log(`reset the counter and the inner width is ${window.innerWidth * (counter - 1)}`);
+        slidesWrapper.style.transform = `none`;
+        counter = 1;         
+    }
+}
+const prevSlider = () => {
+    console.log(`from prev..the counter is at: ${counter}`);
+    if (counter !== 1) {
+        counter--;        
+        console.log(`prev..the counter is at: ${counter}`);
+        console.log(`prev slides wrapper length is: ${slidesWrapper.children.length} and the inner width is: ${window.innerWidth}`);
+        slidesWrapper.style.transform = `translateX(-${window.innerWidth * counter}px)`;
+    }else{
+        
+        counter = slidesWrapper.children.length -1;         
+        slidesWrapper.style.transform = `translateX(-${window.innerWidth * counter}px)`;
+    }
+}
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    setInterval(nextSlider, 5000);
+});
 
 
 
