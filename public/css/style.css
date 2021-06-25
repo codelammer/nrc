@@ -456,6 +456,8 @@ body main .main-wrapper .landing-view .left-content .btns-wrapper a {
   font-size: 1.3rem;
   border: 1px solid #0e121b;
   color: #0e121b;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
 }
 
 body main .main-wrapper .landing-view .left-content .btns-wrapper a:hover {
@@ -464,9 +466,9 @@ body main .main-wrapper .landing-view .left-content .btns-wrapper a:hover {
 }
 
 body main .main-wrapper .landing-view .right-illustration {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
   padding: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -479,9 +481,115 @@ body main .main-wrapper .landing-view .right-illustration {
           justify-content: center;
 }
 
-body main .main-wrapper .landing-view .right-illustration img {
+body main .main-wrapper .landing-view .right-illustration .time-wrapper {
+  border-radius: 1rem;
   height: 100%;
-  width: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(100, 100, 100, 0.418);
+          box-shadow: 0px 0px 10px 5px rgba(100, 100, 100, 0.418);
+}
+
+body main .main-wrapper .landing-view .right-illustration .time-wrapper .nrc-long-logo {
+  height: 100%;
+  padding: 1rem;
+}
+
+body main .main-wrapper .landing-view .right-illustration .time-wrapper .nrc-long-logo img {
+  width: 100%;
+}
+
+body main .main-wrapper .landing-view .right-illustration .time-wrapper div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+body main .main-wrapper .landing-view .right-illustration .time-wrapper .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .main-wrapper .landing-view .right-illustration .time-wrapper .box {
+  background: #39204e;
+  width: 100px;
+  margin: 0 15px;
+  -webkit-box-shadow: 0px 0px 15px 8px #44454b7e;
+          box-shadow: 0px 0px 15px 8px #44454b7e;
+  border-radius: 8px;
+}
+
+body main .main-wrapper .landing-view .right-illustration .time-wrapper .box:nth-child(2) {
+  background-color: #10415b;
+}
+
+body main .main-wrapper .landing-view .right-illustration .time-wrapper .box:nth-child(2) h3 {
+  background-color: #10415b;
+  border-bottom: 2px solid #0b2f44;
+}
+
+body main .main-wrapper .landing-view .right-illustration .time-wrapper .box:nth-child(3) {
+  background-color: #da7122;
+}
+
+body main .main-wrapper .landing-view .right-illustration .time-wrapper .box:nth-child(3) h3 {
+  background-color: #da7122;
+  border-bottom: 2px solid #a05318;
+}
+
+body main .main-wrapper .landing-view .right-illustration .time-wrapper .box:nth-child(4) {
+  background-color: #1f9933;
+}
+
+body main .main-wrapper .landing-view .right-illustration .time-wrapper .box:nth-child(4) h3 {
+  background-color: #1f9933;
+  border-bottom: 2px solid #118020;
+}
+
+body main .main-wrapper .landing-view .right-illustration .time-wrapper h3 {
+  text-align: center;
+  padding: 0.5rem 1rem;
+  color: blanchedalmond;
+  border-bottom: 2px solid #291936;
+  background-color: #39204e;
+  font-size: 1rem;
+  text-shadow: 0px 0px 10px #44454b;
+}
+
+body main .main-wrapper .landing-view .right-illustration .time-wrapper .box h1 {
+  font-size: 50px;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: blanchedalmond;
+}
+
+body main .main-wrapper .landing-view .right-illustration .time-wrapper .alert {
+  display: none;
+  font-size: 1.2rem;
+  color: #fafafa;
+  font-family: san-francisco-bold;
+  border-radius: 2rem 2rem 0 0;
+  font-weight: bolder;
+  background-image: linear-gradient(45deg, #2069ad, #10415b);
+  padding: 2rem;
+  border-bottom: 10px solid #10415b;
+  margin-right: 1rem;
 }
 
 body main .btm .why-us {
