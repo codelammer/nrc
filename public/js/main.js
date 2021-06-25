@@ -78,7 +78,7 @@ const timer = () =>{
         document.querySelector('.alert').style.display = 'block';
         document.querySelector('.container').style.display = 'none';
     }
-
+    let months = Math.floor(diff / (1000*60*60*24*30));
     let days = Math.floor(diff / (1000*60*60*24));
     let hours = Math.floor(diff % (1000*60*60*24) / (1000*60*60));
     let minutes = Math.floor(diff % (1000*60*60)/ (1000*60));
@@ -90,6 +90,7 @@ const timer = () =>{
     minutes <= 9 ? minutes = `0${minutes}` : minutes;
     seconds <= 9 ? seconds = `0${seconds}` : seconds;   
 
+    document.querySelector('#months').textContent = months;
     document.querySelector('#days').textContent = days;
     document.querySelector('#hours').textContent = hours;
     document.querySelector('#minutes').textContent = minutes;
@@ -114,9 +115,9 @@ setInterval(timer,1000);
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    setInterval(nextSlider, 5000);
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//     setInterval(nextSlider, 5000);
+// });
 
 
 
