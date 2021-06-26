@@ -148,9 +148,9 @@ if (window.location.href.indexOf("index") > -1) {
 
 
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     setInterval(nextSlider, 5000);
-// });
+document.addEventListener("DOMContentLoaded", () => {
+    setInterval(nextSlider, 5000);
+});
 
 
 
@@ -234,6 +234,9 @@ if (window.location.href.indexOf("donate") > -1) {
     let monthlyB = _getEl('monthlyB');
 
     console.log("im in the donate page");
+
+    //by default check the one time button
+
 
     oneTimeB.addEventListener('click', ()=>{
         if (oneTimeB.checked) {
