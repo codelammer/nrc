@@ -830,15 +830,273 @@ body {
       }
       .secure-payment {
         flex: 2;
-        // border: 1px solid rebeccapurple;
+        border: 1px solid rgba(148, 148, 148, 0.192);
         border-radius: 30px;
         background-color: $white-bg;
         padding: 4rem;
         margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+
         h2 {
           text-align: center;
           margin: 3rem 0;
         }
+
+        .choose-amount{
+          position: relative;
+          flex: 1;
+          h1{
+            text-align: center;
+            font-size: 1rem;
+            font-family: san-francisco-light;
+            color: $blue-black-alt;
+            margin: 1rem 0;
+            opacity: 70%;
+          }
+          input{
+            position: absolute;
+            z-index: -800;
+          }
+          .amount-wrapper{
+            // border: 1px solid blue;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            label{
+              // opacity: 50%;
+              flex: 0 0 50%;
+              display: flex;
+              // display: none;
+              justify-content: flex-end;
+              span{
+                border-radius: 5rem 0 0 5rem;
+                color: $white-bg;
+                background-color: $blue;
+                cursor: pointer;
+                padding: 0.8rem 2rem;
+                display: table;
+                user-select: none;
+                border-right: 1px solid $white-bg;
+              }
+            }
+            .radio-freq{
+              &:nth-child(2) label span{
+                border: none;
+              }
+              // border: 1px solid black;
+              flex: 0 0 50%;
+            }
+
+            input{
+              &:checked ~ label span{
+                background-color: $green;
+              }
+            }
+
+
+            .monthlybtn{
+              justify-content: flex-start;
+              span{
+                border-radius: 0 5rem 5rem 0;
+              }
+            }
+
+
+
+
+
+
+
+
+            .oneTime{
+              // border: 1px solid lawngreen;
+              flex: 0 0 100%;
+              position: relative;
+              display: none;
+              justify-content: space-between;
+              background-color: rgb(235, 235, 235);
+              div{
+                // border: 1px solid blue;
+                display: flex;
+                label{
+                  all: unset;
+                  border: 1px solid $orange;
+                  padding: 0.5rem 1.5rem;
+                  color: $blue-black;
+                  border-radius: 2px;
+                  transition: background-color 0.5s ease;
+                  user-select: none;
+                  &:hover{
+                    background-color: $orange;
+                    cursor: pointer;
+                    color: $white-bg;
+                    border: 1px solid $green;
+                  }
+                }
+                input{
+                  &:checked ~ label{
+                    background-color: $green;
+                    color: rgb(233, 233, 233);
+                    border: $green;
+                  }
+                }
+              }
+
+              input{
+                &:checked ~ label{
+                  background-color: $green;
+                  color: rgb(233, 233, 233);
+                }
+                &:checked ~ .other-amount-wrapper{
+                  display: flex;
+                }
+              }
+              .other-amount-wrapper{
+                all: unset;
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                margin: 0.5rem 0;
+                cursor: default;
+                input{
+                  border: none;
+                  position: relative;
+                  z-index: 2500;
+                  padding: 0.5rem 1rem;
+                  border: 2px solid $light-black;
+                  transition: outline 0.5s ease;
+                  &:focus{
+                    outline: none;
+                    border: 2px solid rgb(187, 18, 69);
+                  }
+                }
+                label{
+                  border: 1px solid rebeccapurple;
+                  &:hover{
+                    background-color: transparent;
+                  }
+                }
+              }
+            }
+
+
+
+
+            h1{
+              // border: 1px solid black;
+              flex: 0 0 100%;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+            .monthly{
+              display: none;
+              flex: 0 0 100%;
+              position: relative;
+              justify-content: space-between;
+              background-color: rgb(241, 215, 228);
+              div{
+                // border: 1px solid blue;
+                display: flex;
+                label{
+                  all: unset;
+                  border: 1px solid $orange;
+                  padding: 0.5rem 1.5rem;
+                  color: $blue-black;
+                  border-radius: 2px;
+                  transition: background-color 0.5s ease;
+                  user-select: none;
+                  &:hover{
+                    background-color: $orange;
+                    cursor: pointer;
+                    color: $white-bg;
+                    
+                  }
+                }
+                input{
+                  &:checked ~ label{
+                    background-color: $green;
+                    color: rgb(233, 233, 233);
+                    border: $green;
+                  }
+                }
+              }
+
+              input{
+                &:checked ~ label{
+                  background-color: $green;
+                  color: rgb(233, 233, 233);
+                  border: 1px solid $green;
+                }
+                &:checked ~ .other-amount-wrapper{
+                  display: flex;
+                }
+              }
+              .other-amount-wrapper{
+                all: unset;
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                margin: 0.5rem 0;
+                cursor: default;
+                input{
+                  border: none;
+                  position: relative;
+                  z-index: 2500;
+                  padding: 0.5rem 1rem;
+                  border: 2px solid $light-black;
+                  transition: outline 0.5s ease;
+                  &:focus{
+                    outline: none;
+                    border: 2px solid rgb(187, 18, 69);
+                  }
+                }
+                label{
+                  border: 1px solid rebeccapurple;
+                  &:hover{
+                    background-color: transparent;
+                  }
+                }
+              }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          }
+
+        }
+
+
+        .paypal-btn{
+          flex: 0;
+          margin-top: 3.2rem;
+        }
+
+
       }
     }
 
@@ -2158,6 +2416,245 @@ body {
         .secure-payment {
           margin: unset;
           width: 100%;
+          // border: 1px solid red;
+          padding: 1rem;
+
+
+          .choose-amount{
+            // border: 1px solid blue;
+            .amount-wrapper{
+              // border: 1px solid rgb(85, 85, 107);
+              width: 100%;
+              display: flex;
+              flex-flow: row wrap;
+              align-items: center;
+              justify-content: center;
+              padding-top: 1rem;
+  
+              label{
+                // border: 1px solid red;
+                span{
+                  padding: unset;
+                  padding: 0.5rem 1rem;
+
+                }
+              }
+              .radio-freq{
+                // border: 1px solid black;
+                flex: 0 0 50%;
+              }
+  
+              input{
+                &:checked ~ label span{
+                  background-color: $green;
+                }
+              }
+  
+  
+              .monthlybtn{
+                justify-content: flex-start;
+                span{
+                  border-radius: 0 5rem 5rem 0;
+                }
+              }
+  
+  
+  
+  
+  
+  
+  
+  
+              .oneTime{
+                // border: 1px solid lawngreen;
+                flex: 0 0 100%;
+                position: relative;
+                display: none;
+                justify-content: space-between;
+                background-color: rgb(235, 235, 235);
+                flex-flow: row wrap;
+                div{
+                  margin-bottom: 1rem;
+                  display: flex;
+                  label{
+                    all: unset;
+                    border: 1px solid $orange;
+                    padding: 0.5rem 1.5rem;
+                    color: $blue-black;
+                    border-radius: 2px;
+                    transition: background-color 0.5s ease;
+                    user-select: none;
+                    &:hover{
+                      background-color: $orange;
+                      cursor: pointer;
+                      color: $white-bg;
+                      
+                    }
+                  }
+                  input{
+                    &:checked ~ label{
+                      background-color: $green;
+                      color: rgb(233, 233, 233);
+                      border: 1px solid $green;
+                    }
+                  }
+                }
+  
+                input{
+                  &:checked ~ label{
+                    background-color: $green;
+                    color: rgb(233, 233, 233);
+                  }
+                  &:checked ~ .other-amount-wrapper{
+                    display: flex;
+                  }
+                }
+                .other-amount-wrapper{
+                  all: unset;
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  right: 0;
+                  margin: 0.5rem 0;
+                  cursor: default;
+                  input{
+                    border: none;
+                    position: relative;
+                    z-index: 2500;
+                    padding: 0.5rem 1rem;
+                    border: 2px solid $light-black;
+                    transition: outline 0.5s ease;
+                    &:focus{
+                      outline: none;
+                      border: 2px solid rgb(187, 18, 69);
+                    }
+                  }
+                  label{
+                    border: 1px solid rebeccapurple;
+                    &:hover{
+                      background-color: transparent;
+                    }
+                  }
+                }
+              }
+  
+  
+  
+  
+              h1{
+                // border: 1px solid black;
+                flex: 0 0 100%;
+              }
+  
+  
+  
+  
+  
+  
+              .monthly{
+                // border: 1px solid lawngreen;
+                flex: 0 0 100%;
+                position: relative;
+                display: none;
+                justify-content: space-between;
+                background-color: rgb(235, 235, 235);
+                flex-flow: row wrap;
+                div{
+                  margin-bottom: 1rem;
+                  display: flex;
+                  label{
+                    all: unset;
+                    border: 1px solid $orange;
+                    padding: 0.5rem 1.5rem;
+                    color: $blue-black;
+                    border-radius: 2px;
+                    transition: background-color 0.5s ease;
+                    user-select: none;
+                    &:hover{
+                      background-color: $orange;
+                      cursor: pointer;
+                      color: $white-bg;
+                      
+                    }
+                  }
+                  input{
+                    &:checked ~ label{
+                      background-color: $green;
+                      color: rgb(233, 233, 233);
+                      border: $green;
+                    }
+                  }
+                }
+  
+                input{
+                  &:checked ~ label{
+                    background-color: $green;
+                    color: rgb(233, 233, 233);
+                    border: 1px solid $green;
+                  }
+                  &:checked ~ .other-amount-wrapper{
+                    display: flex;
+                  }
+                }
+                .other-amount-wrapper{
+                  all: unset;
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  right: 0;
+                  margin: 0.5rem 0;
+                  cursor: default;
+                  input{
+                    border: none;
+                    position: relative;
+                    z-index: 2500;
+                    padding: 0.5rem 1rem;
+                    border: 2px solid $light-black;
+                    transition: outline 0.5s ease;
+                    &:focus{
+                      outline: none;
+                      border: 2px solid rgb(187, 18, 69);
+                    }
+                  }
+                  label{
+                    border: 1px solid rebeccapurple;
+                    &:hover{
+                      background-color: transparent;
+                    }
+                  }
+                }
+              }  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+            }
+  
+          }          
+
+
+
+
+
+
+
+
         }
       }
 
@@ -2358,6 +2855,10 @@ body {
   }
 }
 
+
+
+
+
 @media screen and (max-width: 500px) {
   body {
     header {
@@ -2496,30 +2997,6 @@ body {
             input {
               min-width: 0px;
               width: 100%;
-            }
-            label {
-              p {
-              }
-            }
-            i {
-            }
-          }
-          .form-footer {
-            button {
-              &:hover {
-              }
-              &:active {
-              }
-            }
-            .hr-text {
-              hr {
-              }
-              h2 {
-              }
-            }
-            a {
-              &:hover {
-              }
             }
           }
         }

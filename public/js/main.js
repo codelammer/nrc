@@ -69,36 +69,69 @@ const prevSlider = () => {
     }
 }
 
-const finaleDate = new Date("December 21, 2021 00:00:00").getTime();
 
-const timer = () =>{
-    const now = new Date().getTime();
-    let diff = finaleDate - now;
-    if(diff < 0){
-        document.querySelector('.alert').style.display = 'block';
-        document.querySelector('.container').style.display = 'none';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if (window.location.href.indexOf("index") > -1) {
+
+    //timer code start
+    const finaleDate = new Date("December 21, 2021 00:00:00").getTime();
+    
+    const timer = () =>{
+        const now = new Date().getTime();
+        let diff = finaleDate - now;
+        if(diff < 0){
+            document.querySelector('.alert').style.display = 'block';
+            document.querySelector('.container').style.display = 'none';
+        }
+        let months = Math.floor(diff / (1000*60*60*24*30));
+        let days = Math.floor(diff / (1000*60*60*24));
+        let hours = Math.floor(diff % (1000*60*60*24) / (1000*60*60));
+        let minutes = Math.floor(diff % (1000*60*60)/ (1000*60));
+        let seconds = Math.floor(diff % (1000*60) / 1000);
+    
+        days <= 99 ? days = `0${days}` : days;
+        days <= 9 ? days = `00${days}` : days;
+        hours <= 9 ? hours = `0${hours}` : hours;
+        minutes <= 9 ? minutes = `0${minutes}` : minutes;
+        seconds <= 9 ? seconds = `0${seconds}` : seconds;   
+    
+        document.querySelector('#months').textContent = months;
+        document.querySelector('#days').textContent = days;
+        document.querySelector('#hours').textContent = hours;
+        document.querySelector('#minutes').textContent = minutes;
+        document.querySelector('#seconds').textContent = seconds;
+    
     }
-    let months = Math.floor(diff / (1000*60*60*24*30));
-    let days = Math.floor(diff / (1000*60*60*24));
-    let hours = Math.floor(diff % (1000*60*60*24) / (1000*60*60));
-    let minutes = Math.floor(diff % (1000*60*60)/ (1000*60));
-    let seconds = Math.floor(diff % (1000*60) / 1000);
-
-    days <= 99 ? days = `0${days}` : days;
-    days <= 9 ? days = `00${days}` : days;
-    hours <= 9 ? hours = `0${hours}` : hours;
-    minutes <= 9 ? minutes = `0${minutes}` : minutes;
-    seconds <= 9 ? seconds = `0${seconds}` : seconds;   
-
-    document.querySelector('#months').textContent = months;
-    document.querySelector('#days').textContent = days;
-    document.querySelector('#hours').textContent = hours;
-    document.querySelector('#minutes').textContent = minutes;
-    document.querySelector('#seconds').textContent = seconds;
-
+    timer();
+    setInterval(timer,1000);
+    
+    //timer end code
 }
-timer();
-setInterval(timer,1000);
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -194,7 +227,54 @@ if (window.location.href.indexOf("donate") > -1) {
     
         }
     ).render('#paypal-button');
+
+    let oneTimeWrapper = _getEl('oneTimeWrap');
+    let monthlyWrapper = _getEl('monthlyWrap');
+    let oneTimeB = _getEl('oneTimeB');
+    let monthlyB = _getEl('monthlyB');
+
+    console.log("im in the donate page");
+
+    oneTimeB.addEventListener('click', ()=>{
+        if (oneTimeB.checked) {
+            oneTimeWrapper.style.display = "flex";
+            monthlyWrapper.style.display = "none";
+            console.log('checked onetime');
+        }
+        else {
+            monthlyWrapper.style.display = "flex";
+            oneTimeWrapper.style.display = "none";
+            console.log('checked monthly');
+        }
+    });
+    monthlyB.addEventListener('click', ()=>{
+        if (oneTimeB.checked) {
+            oneTimeWrapper.style.display = "flex";
+            monthlyWrapper.style.display = "none";
+            console.log('checked onetime');
+        }
+        else {
+            monthlyWrapper.style.display = "flex";
+            oneTimeWrapper.style.display = "none";
+            console.log('checked monthly');
+        }
+    });
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
 
 //pull items from the dom only if in the select_stand page
 if (window.location.href.indexOf("select_stand") > -1) {

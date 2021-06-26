@@ -49,8 +49,98 @@
                 </div>
             </div>
             <div class="secure-payment">
-                <h2>Secure payment</h2>
-                <div id="paypal-button">
+                <div class="choose-amount">
+                    <h1>Choose your frequency</h1>
+                    <div class="amount-wrapper">
+                        <div class="radio-freq">
+                            <input type="radio" name="freq" value="oneTime" id="oneTimeB">
+                            <label for="oneTimeB" class="onetimebtn"><span>One time</span></label>
+                        </div>
+                        <div class="radio-freq">
+                            <input type="radio" name="freq" value="monthly" id="monthlyB">
+                            <label for="monthlyB" class="monthlybtn"><span>Monthly</span></label>
+                        </div>
+                        <h1>Choose amount(select a frequency first)</h1>
+
+
+                        <div class="oneTime" id="oneTimeWrap">
+                                <div>
+                                    <input type="radio" name="oneTime" value="50" id="50">
+                                    <label for="50">$50</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" name="oneTime" value="125" id="125">
+                                    <label for="125">$125</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" name="oneTime" value="250" id="250">
+                                    <label for="250">$250</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" name="oneTime" value="500" id="500">
+                                    <label for="500">$500</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" name="oneTime" value="1000" id="1000">
+                                    <label for="1000">$1000</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" name="oneTime" value="other" id="otherOneTimeAmt">
+                                    <label for="otherOneTimeAmt">Other</label>
+                                    <div class="other-amount-wrapper" id="otherAmount">
+                                        <input type="number" id="otherAmt" placeholder="Enter amount: eg 5">
+                                    </div>
+                                </div>
+                        </div>
+
+                        
+
+                        <div class="monthly" id="monthlyWrap">
+                                <div>
+                                    <input type="radio" name="monthly" value="50" id="m50">
+                                    <label for="m50">$50</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" name="monthly" value="125" id="m125">
+                                    <label for="m125">$125</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" name="monthly" value="250" id="m250">
+                                    <label for="m250">$250</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" name="monthly" value="500" id="m500">
+                                    <label for="m500">$500</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" name="monthly" value="1000" id="m1000">
+                                    <label for="m1000">$1000</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" name="monthly" value="other" id="othermonthlyAmt">
+                                    <label for="othermonthlyAmt">Other</label>
+                                    <div class="other-amount-wrapper" id="otherAmount">
+                                        <input type="number" id="otherAmt" placeholder="Enter amount: eg 5">
+                                    </div>
+                                </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+                <div id="paypal-button" class="paypal-btn">
 
                 </div>
             </div>
