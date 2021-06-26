@@ -931,14 +931,14 @@ body {
                     background-color: $orange;
                     cursor: pointer;
                     color: $white-bg;
-                    border: 1px solid $green;
+                    
                   }
                 }
                 input{
                   &:checked ~ label{
                     background-color: $green;
                     color: rgb(233, 233, 233);
-                    border: $green;
+                    border: 1px solid $green;
                   }
                 }
               }
