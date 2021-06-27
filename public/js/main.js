@@ -57,15 +57,15 @@ const nextSlider = () => {
 }
 const prevSlider = () => {
     console.log(`from prev..the counter is at: ${counter}`);
-    if (counter !== 1) {
+    if (counter !== 0) {
         counter--;        
-        console.log(`prev..the counter is at: ${counter}`);
-        console.log(`prev slides wrapper length is: ${slidesWrapper.children.length} and the inner width is: ${window.innerWidth}`);
+        console.log(`prev button clicked..the counter is at: ${counter}`);
+        console.log(`prev button clicked slides wrapper length is: ${slidesWrapper.children.length} and the inner width is: ${window.innerWidth}`);
         slidesWrapper.style.transform = `translateX(-${window.innerWidth * counter}px)`;
     }else{
-        
-        counter = slidesWrapper.children.length -1;         
-        slidesWrapper.style.transform = `translateX(-${window.innerWidth * counter}px)`;
+        slidesWrapper.style.transform = `translateX(-${window.innerWidth * (slidesWrapper.children.length - 1)}px)`;
+        counter = slidesWrapper.children.length - 1;         
+        console.log(`the slider is in the first position and therefore it is supposed to go to the last slide: counter: ${counter}`);
     }
 }
 

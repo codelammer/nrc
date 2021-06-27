@@ -388,21 +388,19 @@ body main .main-wrapper .landing-view .left-content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 body main .main-wrapper .landing-view .left-content .big-display {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  margin-top: 3rem;
 }
 
 body main .main-wrapper .landing-view .left-content .big-display h1 {
@@ -427,44 +425,6 @@ body main .main-wrapper .landing-view .left-content .big-display h1 span:nth-chi
   font-family: san-francisco-light;
 }
 
-body main .main-wrapper .landing-view .left-content .btns-wrapper {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 12rem;
-          flex: 0 0 12rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-body main .main-wrapper .landing-view .left-content .btns-wrapper a {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-decoration: none;
-  background-color: transparent;
-  border-radius: 10rem;
-  padding: 1rem 2rem;
-  font-size: 1.3rem;
-  border: 1px solid #0e121b;
-  color: #0e121b;
-  -webkit-transition: background-color 0.5s ease;
-  transition: background-color 0.5s ease;
-}
-
-body main .main-wrapper .landing-view .left-content .btns-wrapper a:hover {
-  background-color: #0e121b;
-  color: #fafafa;
-}
-
 body main .main-wrapper .time-wrapper {
   position: absolute;
   pointer-events: none;
@@ -479,9 +439,7 @@ body main .main-wrapper .time-wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  padding: 4rem;
 }
 
 body main .main-wrapper .time-wrapper .time-counter {
@@ -502,7 +460,6 @@ body main .main-wrapper .time-wrapper .time-counter {
   backdrop-filter: blur(10px);
   -webkit-box-shadow: 0px 0px 10px 5px rgba(100, 100, 100, 0.418);
           box-shadow: 0px 0px 10px 5px rgba(100, 100, 100, 0.418);
-  margin-right: 4rem;
   position: relative;
 }
 
@@ -638,6 +595,38 @@ body main .main-wrapper .time-wrapper .time-counter .btn-counter a {
 
 body main .main-wrapper .time-wrapper .time-counter .btn-counter a:hover {
   background-color: #740e5d;
+}
+
+body main .main-wrapper .time-wrapper .btns-wrapper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  pointer-events: auto;
+}
+
+body main .main-wrapper .time-wrapper .btns-wrapper a {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  background-color: transparent;
+  border-radius: 10rem;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  border: 1px solid #0e121b;
+  color: #fafafa;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+body main .main-wrapper .time-wrapper .btns-wrapper a:hover {
+  background-color: #0e121b;
+  color: #fafafa;
 }
 
 body main .btm .why-us {
@@ -3188,12 +3177,139 @@ body footer .socials a i {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     overflow: hidden;
   }
   body main .main-wrapper .time-wrapper .time-counter {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+    padding: 1rem;
+  }
+  body main .main-wrapper .time-wrapper .time-counter .nrc-long-logo {
+    display: none;
+  }
+  body main .main-wrapper .time-wrapper .time-counter div {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  body main .main-wrapper .time-wrapper .time-counter .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body main .main-wrapper .time-wrapper .time-counter .box {
+    background: #39204e;
+    margin-right: 0.4rem;
+    -webkit-box-shadow: 0px 0px 15px 8px #44454b7e;
+            box-shadow: 0px 0px 15px 8px #44454b7e;
+    border-radius: 8px;
+  }
+  body main .main-wrapper .time-wrapper .time-counter .box:nth-child(2) {
+    background-color: #10415b;
+  }
+  body main .main-wrapper .time-wrapper .time-counter .box:nth-child(2) h3 {
+    background-color: #10415b;
+    border-bottom: 2px solid #0b2f44;
+  }
+  body main .main-wrapper .time-wrapper .time-counter .box:nth-child(3) {
+    background-color: #da7122;
+  }
+  body main .main-wrapper .time-wrapper .time-counter .box:nth-child(3) h3 {
+    background-color: #da7122;
+    border-bottom: 2px solid #a05318;
+  }
+  body main .main-wrapper .time-wrapper .time-counter .box:nth-child(4) {
+    background-color: #1f9933;
+  }
+  body main .main-wrapper .time-wrapper .time-counter .box:nth-child(4) h3 {
+    background-color: #1f9933;
+    border-bottom: 2px solid #118020;
+  }
+  body main .main-wrapper .time-wrapper .time-counter .box:nth-child(5) {
+    background-color: #84a821;
     margin-right: unset;
-    -webkit-transform: scale(0.65);
-            transform: scale(0.65);
+  }
+  body main .main-wrapper .time-wrapper .time-counter .box:nth-child(5) h3 {
+    background-color: #84a821;
+    border-bottom: 2px solid #607a18;
+  }
+  body main .main-wrapper .time-wrapper .time-counter h3 {
+    text-align: center;
+    padding: 0.5rem 0rem;
+    font-size: 0.8rem;
+    text-shadow: 0px 0px 10px #44454b;
+  }
+  body main .main-wrapper .time-wrapper .time-counter h1 {
+    font-size: 1rem;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: blanchedalmond;
+  }
+  body main .main-wrapper .time-wrapper .time-counter .alert {
+    display: none;
+    font-size: 1.2rem;
+    color: #fafafa;
+    font-family: san-francisco-bold;
+    border-radius: 2rem 2rem 0 0;
+    font-weight: bolder;
+    background-image: linear-gradient(45deg, #2069ad, #10415b);
+    padding: 2rem;
+    border-bottom: 10px solid #10415b;
+    margin-right: 1rem;
+  }
+  body main .main-wrapper .time-wrapper .time-counter .btn-counter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    pointer-events: auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    left: 0;
+    margin-top: 1rem;
+  }
+  body main .main-wrapper .time-wrapper .time-counter .btn-counter a {
+    padding: 1rem;
+    font-size: 0.8rem;
+    text-decoration: none;
+    display: table;
+    color: white;
+    background-color: #991a7b;
+    border-radius: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    -webkit-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+  }
+  body main .main-wrapper .time-wrapper .time-counter .btn-counter a:hover {
+    background-color: #740e5d;
+  }
+  body main .main-wrapper .time-wrapper .btns-wrapper {
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  body main .main-wrapper .time-wrapper .btns-wrapper a {
+    padding: 1rem 2rem;
+    font-size: 1rem;
   }
   body main .btm {
     display: -webkit-box;

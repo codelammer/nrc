@@ -278,11 +278,13 @@ body {
           padding: 0 4rem;
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          // justify-content: center;
           .big-display {
-            flex: 1;
+            // border: 1px solid red;
+            flex: 0 0 50%;
             display: flex;
             align-items: flex-end;
+            margin-top: 3rem;
             h1 {
               font-size: 3.2rem;
               line-height: 3.3rem;
@@ -299,31 +301,13 @@ body {
               }
             }
           }
-          .btns-wrapper {
-            // border: 1px solid red;
-            flex: 0 0 12rem;
-            @include flexCentered();
-            justify-content: flex-start;
-            a {
-              align-items: center;
-              text-decoration: none;
-              background-color: transparent;
-              border-radius: 10rem;
-              padding: 1rem 2rem;
-              font-size: 1.3rem;
-              border: 1px solid $black;
-              color: $black;
-              transition: background-color 0.5s ease;
-              &:hover {
-                background-color: $black;
-                color: $white-bg;
-              }
-            }
-          }
         }
       }
+
+
+
       .time-wrapper{
-        // border: 1px solid red;
+        // border: 2px solid yellowgreen;
         position: absolute;
         pointer-events: none;
         top: 0;
@@ -333,7 +317,8 @@ body {
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        padding: 4rem;
+        // justify-content: flex-end;
         .time-counter{
           flex: 0 0 50%;
           padding: 2rem;
@@ -345,7 +330,6 @@ body {
           -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
           box-shadow: 0px 0px 10px 5px rgba(100, 100, 100, 0.418);
-          margin-right: 4rem;
           position: relative;
           .nrc-long-logo{
             // border: 1px solid yellow;
@@ -464,11 +448,32 @@ body {
 
 
 
+        .btns-wrapper {
+          // border: 1px solid red;
+          flex: 0 0 50%;
+          display: flex;
+          align-self: flex-end;
+          pointer-events: auto;
+          a {
+            align-items: center;
+            text-decoration: none;
+            background-color: transparent;
+            border-radius: 10rem;
+            padding: 1rem 2rem;
+            font-size: 1.3rem;
+            border: 1px solid $black;
+            color: $white-bg;
+            transition: background-color 0.5s ease;
+            &:hover {
+              background-color: $black;
+              color: $white-bg;
+            }
+          }
+        }
 
 
 
       }
-
 
 
 
@@ -2338,17 +2343,130 @@ body {
         .time-wrapper{
           // border: 3px solid red;
           flex-direction: column;
+          justify-content: flex-end;
           overflow: hidden;
-          // display: none;
           .time-counter{
-            margin-right: unset;
-            transform: scale(0.65);
-
-
+            transform: scale(0.8);
+            flex: unset;
+            padding: 1rem;
+            .nrc-long-logo{
+              display: none;
+            }
+  
+            div{
+              flex: 1;
+            }
+  
+            .container {
+              // border: 2px solid rebeccapurple;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .box {
+              background: #39204e;
+              margin-right: 0.4rem;
+              box-shadow: 0px 0px 15px 8px #44454b7e;
+              border-radius: 8px;
+              &:nth-child(2) {
+                background-color: $blue-black;
+                h3 {
+                  background-color: $blue-black;
+                  border-bottom: 2px solid rgb(11, 47, 68);
+                }
+              }
+              &:nth-child(3) {
+                background-color: #da7122;
+                h3 {
+                  background-color: #da7122;
+                  border-bottom: 2px solid #a05318;
+                }
+              }
+              &:nth-child(4) {
+                background-color: $green;
+                h3 {
+                  background-color: $green;
+                  border-bottom: 2px solid rgb(17, 128, 32);
+                }
+              }
+              &:nth-child(5) {
+                background-color: #84a821;
+                h3 {
+                  background-color: #84a821;
+                  border-bottom: 2px solid #607a18;
+                }
+                margin-right: unset;
+              }
+  
+  
+            }
+            h3 {
+              text-align: center;
+              padding: 0.5rem 0rem;
+              font-size: 0.8rem;
+              text-shadow: 0px 0px 10px #44454b;
+            }
+            h1 {
+              font-size: 1rem;
+              text-align: center;
+              font-family: sans-serif;
+              font-weight: 800;
+              margin-bottom: 15px;
+              color: blanchedalmond;
+            }
+            .alert {
+              display: none;
+              // border: 2px solid red;
+              font-size: 1.2rem;
+              color: $white-bg;
+              font-family: san-francisco-bold;
+              border-radius: 2rem 2rem 0 0;
+              font-weight: bolder;
+              background-image: linear-gradient(45deg, $blue, $blue-black);
+              padding: 2rem;
+              border-bottom: 10px solid $blue-black;
+              margin-right: 1rem;
+            }
+  
+            .btn-counter{
+              display: flex;
+              // border: 1px solid red;
+              pointer-events: auto;
+              justify-content: space-between;
+              width: 100%;
+              left: 0;
+              margin-top: 1rem ;
+              a{
+                // border: 1px solid red;
+                padding: 1rem;
+                font-size: 0.8rem;
+                text-decoration: none;
+                display: table;
+                color: white;
+                background-color: #991a7b;
+                border-radius: 3rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                transition: background-color 0.5s ease;
+                &:hover{
+                  background-color: #740e5d;
+                }
+              }
+            }
+  
+  
           }
   
   
-  
+          .btns-wrapper {
+            // border: 1px solid red;
+            flex: unset;
+            align-self: center;
+            a {
+              padding: 1rem 2rem;
+              font-size: 1rem;
+            }
+          }  
   
   
   
