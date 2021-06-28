@@ -23,7 +23,6 @@ navAnchorTags.forEach((element) => {
 let hH = `${headerNav.offsetHeight * 0.01}px`;
 let vh = `${window.innerHeight * 0.01}px`;
 let vw = `${window.innerWidth * 0.01}px`;
-console.log(window.innerWidth);
 
 
 document.documentElement.style.setProperty("--vh", vh);
@@ -45,27 +44,21 @@ let counter = 1;
 
 const nextSlider = () => {
     if (counter !== slidesWrapper.children.length) {
-        console.log(`counter is: ${counter}`);
-        console.log(`slides wrapper length is: ${slidesWrapper.children.length}`);
         slidesWrapper.style.transform = `translateX(-${window.innerWidth * counter}px)`;
         counter++;        
     }else{
-        console.log(`reset the counter and the inner width is ${window.innerWidth * (counter - 1)}`);
         slidesWrapper.style.transform = `none`;
         counter = 1;         
     }
 }
 const prevSlider = () => {
-    console.log(`from prev..the counter is at: ${counter}`);
     if (counter !== 0) {
         counter--;        
-        console.log(`prev button clicked..the counter is at: ${counter}`);
-        console.log(`prev button clicked slides wrapper length is: ${slidesWrapper.children.length} and the inner width is: ${window.innerWidth}`);
         slidesWrapper.style.transform = `translateX(-${window.innerWidth * counter}px)`;
     }else{
         slidesWrapper.style.transform = `translateX(-${window.innerWidth * (slidesWrapper.children.length - 1)}px)`;
         counter = slidesWrapper.children.length - 1;         
-        console.log(`the slider is in the first position and therefore it is supposed to go to the last slide: counter: ${counter}`);
+        
     }
 }
 
@@ -89,7 +82,7 @@ const prevSlider = () => {
 if (window.location.href.indexOf("index") > -1) {
 
     //timer code start
-    const finaleDate = new Date("December 21, 2021 00:00:00").getTime();
+    const finaleDate = new Date("November 29, 2021 00:00:00").getTime();
     
     const timer = () =>{
         const now = new Date().getTime();
