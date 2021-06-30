@@ -718,6 +718,19 @@ body main .btm .why-us .why-us-body .cards-wrapper .card {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #2069ad;
+}
+
+body main .btm .why-us .why-us-body .cards-wrapper .card p {
+  color: #dddddd;
+}
+
+body main .btm .why-us .why-us-body .cards-wrapper .card:nth-child(3) {
+  background-color: #e07a27;
+}
+
+body main .btm .why-us .why-us-body .cards-wrapper .card:last-child {
+  background-color: #1f9933;
 }
 
 body main .btm .why-us .why-us-body .cards-wrapper i {
@@ -956,7 +969,7 @@ body main .btm .key-players .partners-wrapper {
           flex-direction: column;
   -ms-flex-flow: row wrap;
       flex-flow: row wrap;
-  padding: 4rem;
+  padding: 0 4rem 4rem 4rem;
 }
 
 body main .btm .key-players .partners-wrapper .partner-item {
@@ -973,6 +986,23 @@ body main .btm .key-players .partners-wrapper .partner-item {
 
 body main .btm .key-players .partners-wrapper .partner-item img {
   height: 7rem;
+}
+
+body main .btm .key-players .partners-2-wrapper {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2rem;
+  -ms-grid-columns: (16rem)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 16rem);
+  padding-bottom: 4rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+}
+
+body main .btm .key-players .partners-2-wrapper .partner-item img {
+  height: 5rem;
 }
 
 body main .sign-in-wrapper {
