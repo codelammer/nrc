@@ -762,6 +762,7 @@ body main .btm .keynote-speakers {
   -webkit-box-pack: stretch;
       -ms-flex-pack: stretch;
           justify-content: stretch;
+  position: relative;
 }
 
 body main .btm .keynote-speakers .title {
@@ -803,19 +804,16 @@ body main .btm .keynote-speakers .cards-wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  overflow-x: auto;
 }
 
 body main .btm .keynote-speakers .cards-wrapper .card {
   min-height: 25rem;
-  max-width: 18rem;
+  min-width: 15rem;
   border-radius: 30px;
   background-color: #fafafa;
   -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.219);
           box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.219);
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -835,6 +833,8 @@ body main .btm .keynote-speakers .cards-wrapper .card {
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  position: unset;
+  overflow: hidden;
 }
 
 body main .btm .keynote-speakers .cards-wrapper .card .card-img {
@@ -893,13 +893,88 @@ body main .btm .keynote-speakers .cards-wrapper .card .card-footer h5 {
   font-size: 1rem;
 }
 
-body main .btm .keynote-speakers .cards-wrapper .card:last-child {
-  margin: unset;
+body main .btm .keynote-speakers .cards-wrapper .card .card-footer .readmore input {
+  all: unset;
+  position: absolute;
+  z-index: -700;
 }
 
-body main .btm .keynote-speakers .cards-wrapper .card:hover {
-  -webkit-transform: rotate(3deg) scale(1.1);
-          transform: rotate(3deg) scale(1.1);
+body main .btm .keynote-speakers .cards-wrapper .card .card-footer .readmore input:checked ~ .about-speaker-wrapper {
+  display: block;
+}
+
+body main .btm .keynote-speakers .cards-wrapper .card .card-footer .readmore h5 label {
+  color: #232044;
+  cursor: pointer;
+}
+
+body main .btm .keynote-speakers .cards-wrapper .card .card-footer .readmore .about-speaker-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 4rem;
+  padding: 2rem;
+  background-color: #fafafa;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 0px 5px 10px #44454b44;
+          box-shadow: 0px 0px 5px 10px #44454b44;
+  display: none;
+}
+
+body main .btm .keynote-speakers .cards-wrapper .card .card-footer .readmore .about-speaker-wrapper h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .btm .keynote-speakers .cards-wrapper .card .card-footer .readmore .about-speaker-wrapper label {
+  all: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body main .btm .keynote-speakers .cards-wrapper .card .card-footer .readmore .about-speaker-wrapper label i {
+  all: unset;
+  color: #cc3925;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+body main .btm .keynote-speakers .cards-wrapper .card .card-footer .readmore .about-speaker-wrapper .about-speaker-wrapper-body p {
+  text-align: center;
+  color: #686868;
+}
+
+body main .btm .keynote-speakers .cards-wrapper .card .card-footer .readmore .about-speaker-wrapper .img-s-logo {
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .btm .keynote-speakers .cards-wrapper .card .card-footer .readmore .about-speaker-wrapper .img-s-logo img {
+  height: 3rem;
+}
+
+body main .btm .keynote-speakers .cards-wrapper .card:last-child {
+  margin: unset;
 }
 
 body main .btm .keynote-speakers .cards-wrapper i {
@@ -3440,16 +3515,164 @@ body footer .footer-bottom {
   }
   body main .btm .keynote-speakers {
     height: unset;
+    padding: unset;
   }
   body main .btm .keynote-speakers .cards-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1rem;
   }
   body main .btm .keynote-speakers .cards-wrapper .card {
     margin-right: unset;
     margin-bottom: 1rem;
+  }
+  body main .btm .keynote-speakers .cards-wrapper .card {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    margin-right: unset;
+    cursor: pointer;
+  }
+  body main .btm .keynote-speakers .cards-wrapper .card .card-img {
+    -webkit-box-flex: 5;
+        -ms-flex: 5;
+            flex: 5;
+    overflow: hidden;
+    max-height: 18rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body main .btm .keynote-speakers .cards-wrapper .card .card-img img {
+    height: 19rem;
+  }
+  body main .btm .keynote-speakers .cards-wrapper .card .card-footer {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    padding: 0.5rem 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+  }
+  body main .btm .keynote-speakers .cards-wrapper .card .card-footer h4 {
+    font-size: 1.2rem;
+    color: #0f2030;
+    letter-spacing: 1px;
+  }
+  body main .btm .keynote-speakers .cards-wrapper .card .card-footer hr {
+    border-bottom: none;
+    opacity: 30%;
+    margin: 0.5rem 0;
+  }
+  body main .btm .keynote-speakers .cards-wrapper .card .card-footer h5 {
+    color: #e07a27;
+    font-size: 1rem;
+  }
+  body main .btm .keynote-speakers .cards-wrapper .card .card-footer .readmore input {
+    all: unset;
+    position: absolute;
+    z-index: -700;
+  }
+  body main .btm .keynote-speakers .cards-wrapper .card .card-footer .readmore input:checked ~ .about-speaker-wrapper {
+    display: block;
+  }
+  body main .btm .keynote-speakers .cards-wrapper .card .card-footer .readmore h5 label {
+    color: #232044;
+    cursor: pointer;
+  }
+  body main .btm .keynote-speakers .cards-wrapper .card .card-footer .readmore .about-speaker-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 1rem;
+    padding: 2rem;
+    background-color: #fafafa;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 0px 5px 10px #44454b44;
+            box-shadow: 0px 0px 5px 10px #44454b44;
+    display: none;
+  }
+  body main .btm .keynote-speakers .cards-wrapper .card .card-footer .readmore .about-speaker-wrapper h4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body main .btm .keynote-speakers .cards-wrapper .card .card-footer .readmore .about-speaker-wrapper label {
+    all: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  body main .btm .keynote-speakers .cards-wrapper .card .card-footer .readmore .about-speaker-wrapper label i {
+    all: unset;
+    color: #cc3925;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  body main .btm .keynote-speakers .cards-wrapper .card .card-footer .readmore .about-speaker-wrapper .about-speaker-wrapper-body p {
+    text-align: center;
+    color: #686868;
+  }
+  body main .btm .keynote-speakers .cards-wrapper .card .card-footer .readmore .about-speaker-wrapper .img-s-logo {
+    margin: 1rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body main .btm .keynote-speakers .cards-wrapper .card .card-footer .readmore .about-speaker-wrapper .img-s-logo img {
+    height: 3rem;
+  }
+  body main .btm .keynote-speakers .cards-wrapper .card:last-child {
+    margin: unset;
+  }
+  body main .btm .keynote-speakers .cards-wrapper i {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 3rem;
+    padding: 1rem;
+    color: #686868;
   }
   body main .sign-in-wrapper {
     overflow: auto;

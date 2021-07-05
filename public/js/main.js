@@ -83,7 +83,23 @@ if (window.location.href.indexOf("index") > -1) {
 
     //timer code start
     const finaleDate = new Date("November 29, 2021 00:00:00").getTime();
-    
+    const keynoteSpeakers = document.querySelector('.keynote-speakers');
+    console.log(keynoteSpeakers.children[1].children);
+
+    //add the exit button code to a speaker's read more pop-up
+    for (let i = 0; i < keynoteSpeakers.children[1].children.length; i++) {
+        keynoteSpeakers.children[1].children[i].children[1].children[3].children[2].children[0].children[0].addEventListener('click', () => {
+            keynoteSpeakers.children[1].children[i].children[1].children[3].children[2].style.display = "none";
+            console.log('displayed none');
+        });
+    }
+
+
+
+    //end readmore exit button
+
+
+
     const timer = () =>{
         const now = new Date().getTime();
         let diff = finaleDate - now;

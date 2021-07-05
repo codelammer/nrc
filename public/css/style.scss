@@ -564,6 +564,7 @@ body {
         flex-direction: column;
         padding: 2rem;
         justify-content: stretch;
+        position: relative;
         .title {
           // border: 1px solid red;
           @include flexCentered();
@@ -579,24 +580,27 @@ body {
             letter-spacing: 0.2rem;
           }
         }
+        
         .cards-wrapper {
           flex: 1;
           display: flex;
+          // flex-flow: row nowrap;
           margin-top: 2rem;
           align-items: center;
-          justify-content: center;
+          overflow-x: auto;
           .card {
             min-height: 25rem;
-            max-width: 18rem;
+            min-width: 15rem;
             border-radius: 30px;
             background-color: $white-bg;
             box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.219);
-            overflow: hidden;
             @include flexCentered();
             flex-direction: column;
             margin-right: 2rem;
             cursor: pointer;
             transition: transform 0.5s ease;
+            position: unset;
+            overflow: hidden;
             .card-img {
               // border: 1px solid red;
               flex: 5;
@@ -609,7 +613,6 @@ body {
             }
             .card-footer {
               // border: 1px solid greenyellow;
-
               flex: 2;
               padding: 0.5rem 1rem;
               display: flex;
@@ -630,12 +633,66 @@ body {
                 color: $orange;
                 font-size: 1rem;
               }
+              .readmore{
+                // border: 3px solid green;
+                input{
+                  all: unset;
+                  position: absolute;
+                  z-index: -700;
+                  &:checked ~ .about-speaker-wrapper{
+                    display: block;
+                  }
+                }
+                h5{
+                  label{
+                    color: rgb(35, 32, 68);
+                    cursor: pointer;
+                  }
+                }
+                .about-speaker-wrapper{
+                  // border: 1px solid red;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  margin: 4rem;
+                  padding: 2rem;
+                  background-color: $white-bg;
+                  border-radius: 1rem;
+                  box-shadow: 0px 0px 5px 10px #44454b44;
+                  display: none;
+                  h4{
+                    @include flexCentered();
+                  }
+                  label{
+                    all: unset;
+                    display: flex;
+                    justify-content: flex-end;
+                    i{
+                      all: unset;
+                      color: #cc3925;
+                      cursor: pointer;
+                      font-size: 1.2rem;
+                    }
+                  }
+                  .about-speaker-wrapper-body{
+                    p{
+                      text-align: center;
+                      color: $light-black;
+                    }
+                  }
+                  .img-s-logo{
+                    margin: 1rem 0;
+                    @include flexCentered();
+                    img{
+                      height: 3rem;
+                    }
+                  }
+                }
+              }
             }
             &:last-child {
               margin: unset;
-            }
-            &:hover {
-              transform: rotate(3deg) scale(1.1);
             }
           }
           i {
@@ -646,6 +703,7 @@ body {
             color: $light-black;
           }
         }
+
       }
       .key-players{
         // border: 1px solid red;
@@ -2556,13 +2614,124 @@ body {
 
         .keynote-speakers {
           height: unset;
+          padding: unset;
           .cards-wrapper {
             flex-direction: column;
+            justify-content: center;
+            padding: 1rem;
             .card {
               margin-right: unset;
               margin-bottom: 1rem;
             }
+            .card {
+              transform: scale(0.8);
+              margin-right: unset;
+              cursor: pointer;
+              .card-img {
+                // border: 1px solid red;
+                flex: 5;
+                overflow: hidden;
+                max-height: 18rem;
+                @include flexCentered();
+                img {
+                  height: 19rem;
+                }
+              }
+              .card-footer {
+                // border: 1px solid greenyellow;
+                flex: 2;
+                padding: 0.5rem 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                width: 100%;
+                h4 {
+                  font-size: 1.2rem;
+                  color: $dark-blue;
+                  letter-spacing: 1px;
+                }
+                hr {
+                  border-bottom: none;
+                  opacity: 30%;
+                  margin: 0.5rem 0;
+                }
+                h5 {
+                  color: $orange;
+                  font-size: 1rem;
+                }
+                .readmore{
+                  // border: 3px solid green;
+                  input{
+                    all: unset;
+                    position: absolute;
+                    z-index: -700;
+                    &:checked ~ .about-speaker-wrapper{
+                      display: block;
+                    }
+                  }
+                  h5{
+                    label{
+                      color: rgb(35, 32, 68);
+                      cursor: pointer;
+                    }
+                  }
+                  .about-speaker-wrapper{
+                    // border: 1px solid red;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    margin: 1rem;
+                    padding: 2rem;
+                    background-color: $white-bg;
+                    border-radius: 1rem;
+                    box-shadow: 0px 0px 5px 10px #44454b44;
+                    display: none;
+                    h4{
+                      @include flexCentered();
+                    }
+                    label{
+                      all: unset;
+                      display: flex;
+                      justify-content: end;
+                      i{
+                        all: unset;
+                        color: #cc3925;
+                        cursor: pointer;
+                        font-size: 1.2rem;
+                      }
+                    }
+                    .about-speaker-wrapper-body{
+                      p{
+                        text-align: center;
+                        color: $light-black;
+                      }
+                    }
+                    .img-s-logo{
+                      margin: 1rem 0;
+                      @include flexCentered();
+                      img{
+                        height: 3rem;
+                      }
+                    }
+                  }
+                }
+              }
+              &:last-child {
+                margin: unset;
+              }
+            }
+            i {
+              // border: 1px solid red;
+              @include flexCentered();
+              font-size: 3rem;
+              padding: 1rem;
+              color: $light-black;
+            }
           }
+
+
+
         }
       }
 
