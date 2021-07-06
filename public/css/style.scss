@@ -599,18 +599,20 @@ body {
             margin-right: 2rem;
             cursor: pointer;
             transition: transform 0.5s ease;
-            position: unset;
-            overflow: hidden;
             .card-img {
               // border: 1px solid red;
               flex: 5;
+              border-radius: 30px 30px 0px 0px;
               overflow: hidden;
               max-height: 18rem;
+              width: 100%;
               @include flexCentered();
+              overflow: hidden;
               img {
                 height: 19rem;
               }
             }
+            
             .card-footer {
               // border: 1px solid greenyellow;
               flex: 2;
@@ -635,6 +637,7 @@ body {
               }
               .readmore{
                 // border: 3px solid green;
+                z-index: 42;
                 input{
                   all: unset;
                   position: absolute;
@@ -2169,6 +2172,88 @@ body {
         }
       }
     }
+  
+    // Start blog and media
+    .blog-and-media{
+      // border: 2px solid red;
+      padding: 1rem 4rem;
+      overflow-y: auto;
+      a{
+        cursor: pointer;
+        &:hover .blog-title{
+          transform: scale(1.01);
+        }
+      }
+      // position: absolute;
+      // height: unset;
+      .most-recent-blog{
+        // border: 1px solid green;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 30rem;
+        grid-gap: 1rem;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "displayBig displayBig displaySTR"
+                              "displayBig displayBig displayBTR"
+        ;
+
+        .display-big{
+          // border: 1px solid red;
+          position: relative;
+          height: 100%;
+          grid-area: displayBig;
+        }
+        .display-small{
+          position: relative;
+        }
+        .img-blog-wrapper{
+          // border: 2px solid blue;
+          overflow: hidden;
+          height: 100%;
+          @include flexCentered();
+          width: 100%;
+          background-color: #000000;
+          img{
+            filter: brightness(50%);
+            width: 200%;
+          }
+        }
+
+        .display-small-top-right{
+          grid-area: displaySTR;
+        }
+        .display-small-bottom-right{
+          grid-area: displayBTR;
+        }
+        .blog-title{
+          position: absolute;
+          // border: 1px solid red;
+          bottom: 0;
+          transition: transform 0.5s ease;
+          transform-origin: bottom;
+          h2{
+            color: $blue-black-alt;
+            margin: 0 2rem;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border-left: 5px solid rgb(214, 87, 87);
+            background-color: rgba(255, 255, 255, 0.637);
+            display: table;
+          }
+          p{
+            color: white;
+            font-size: 0.9rem;
+            padding: 0rem 2rem 2rem 2rem;
+          }
+        }
+      }
+      .other-blogs{
+        border: 2px solid yellow;
+      }
+    }
+    //end blog and media
+
+
   }
 
   footer {
@@ -2638,23 +2723,6 @@ body {
                 }
               }
               .card-footer {
-                // border: 1px solid greenyellow;
-                flex: 2;
-                padding: 0.5rem 1rem;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                width: 100%;
-                h4 {
-                  font-size: 1.2rem;
-                  color: $dark-blue;
-                  letter-spacing: 1px;
-                }
-                hr {
-                  border-bottom: none;
-                  opacity: 30%;
-                  margin: 0.5rem 0;
-                }
                 h5 {
                   color: $orange;
                   font-size: 1rem;

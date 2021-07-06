@@ -833,16 +833,16 @@ body main .btm .keynote-speakers .cards-wrapper .card {
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-  position: unset;
-  overflow: hidden;
 }
 
 body main .btm .keynote-speakers .cards-wrapper .card .card-img {
   -webkit-box-flex: 5;
       -ms-flex: 5;
           flex: 5;
+  border-radius: 30px 30px 0px 0px;
   overflow: hidden;
   max-height: 18rem;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -852,6 +852,7 @@ body main .btm .keynote-speakers .cards-wrapper .card .card-img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
 }
 
 body main .btm .keynote-speakers .cards-wrapper .card .card-img img {
@@ -891,6 +892,10 @@ body main .btm .keynote-speakers .cards-wrapper .card .card-footer hr {
 body main .btm .keynote-speakers .cards-wrapper .card .card-footer h5 {
   color: #e07a27;
   font-size: 1rem;
+}
+
+body main .btm .keynote-speakers .cards-wrapper .card .card-footer .readmore {
+  z-index: 42;
 }
 
 body main .btm .keynote-speakers .cards-wrapper .card .card-footer .readmore input {
@@ -3099,6 +3104,111 @@ body main .stands-wrapper form .confirm-exhibition .submit-stand button:hover {
   background-color: #0a6b0a;
 }
 
+body main .blog-and-media {
+  padding: 1rem 4rem;
+  overflow-y: auto;
+}
+
+body main .blog-and-media a {
+  cursor: pointer;
+}
+
+body main .blog-and-media a:hover .blog-title {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+body main .blog-and-media .most-recent-blog {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  height: 30rem;
+  grid-gap: 1rem;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: "displayBig displayBig displaySTR" "displayBig displayBig displayBTR";
+}
+
+body main .blog-and-media .most-recent-blog .display-big {
+  position: relative;
+  height: 100%;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: displayBig;
+}
+
+body main .blog-and-media .most-recent-blog .display-small {
+  position: relative;
+}
+
+body main .blog-and-media .most-recent-blog .img-blog-wrapper {
+  overflow: hidden;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  background-color: #000000;
+}
+
+body main .blog-and-media .most-recent-blog .img-blog-wrapper img {
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+  width: 200%;
+}
+
+body main .blog-and-media .most-recent-blog .display-small-top-right {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: displaySTR;
+}
+
+body main .blog-and-media .most-recent-blog .display-small-bottom-right {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: displayBTR;
+}
+
+body main .blog-and-media .most-recent-blog .blog-title {
+  position: absolute;
+  bottom: 0;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+body main .blog-and-media .most-recent-blog .blog-title h2 {
+  color: #003087;
+  margin: 0 2rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-left: 5px solid #d65757;
+  background-color: rgba(255, 255, 255, 0.637);
+  display: table;
+}
+
+body main .blog-and-media .most-recent-blog .blog-title p {
+  color: white;
+  font-size: 0.9rem;
+  padding: 0rem 2rem 2rem 2rem;
+}
+
+body main .blog-and-media .other-blogs {
+  border: 2px solid yellow;
+}
+
 body footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3555,33 +3665,6 @@ body footer .footer-bottom {
   }
   body main .btm .keynote-speakers .cards-wrapper .card .card-img img {
     height: 19rem;
-  }
-  body main .btm .keynote-speakers .cards-wrapper .card .card-footer {
-    -webkit-box-flex: 2;
-        -ms-flex: 2;
-            flex: 2;
-    padding: 0.5rem 1rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    width: 100%;
-  }
-  body main .btm .keynote-speakers .cards-wrapper .card .card-footer h4 {
-    font-size: 1.2rem;
-    color: #0f2030;
-    letter-spacing: 1px;
-  }
-  body main .btm .keynote-speakers .cards-wrapper .card .card-footer hr {
-    border-bottom: none;
-    opacity: 30%;
-    margin: 0.5rem 0;
   }
   body main .btm .keynote-speakers .cards-wrapper .card .card-footer h5 {
     color: #e07a27;
