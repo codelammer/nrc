@@ -20,7 +20,7 @@ navAnchorTags.forEach((element) => {
 
 
 //change active class
-let hH = `${headerNav.offsetHeight * 0.01}px`;
+let hH = `${headerNav.offsetHeight * 0.01}px`; // headerNav.offsetHeight * 0.01 + "px"
 let vh = `${window.innerHeight * 0.01}px`;
 let vw = `${window.innerWidth * 0.01}px`;
 
