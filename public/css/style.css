@@ -3114,13 +3114,21 @@ body main .blog-and-media a {
 }
 
 body main .blog-and-media a:hover .blog-title {
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
+  display: none;
 }
 
 body main .blog-and-media a:hover p {
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
+  display: none;
+}
+
+body main .blog-and-media a:hover .img-blog-wrapper video {
+  -webkit-filter: unset;
+          filter: unset;
+}
+
+body main .blog-and-media a:hover .img-blog-wrapper img {
+  -webkit-filter: unset;
+          filter: unset;
 }
 
 body main .blog-and-media .most-recent-blog {
@@ -3157,9 +3165,23 @@ body main .blog-and-media .most-recent-blog .img-blog-wrapper {
 }
 
 body main .blog-and-media .most-recent-blog .img-blog-wrapper img {
+  -webkit-transition: -webkit-filter 0.5s ease;
+  transition: -webkit-filter 0.5s ease;
+  transition: filter 0.5s ease;
+  transition: filter 0.5s ease, -webkit-filter 0.5s ease;
   -webkit-filter: brightness(30%);
           filter: brightness(30%);
   height: 120%;
+}
+
+body main .blog-and-media .most-recent-blog .img-blog-wrapper video {
+  -webkit-transition: -webkit-filter 0.5s ease;
+  transition: -webkit-filter 0.5s ease;
+  transition: filter 0.5s ease;
+  transition: filter 0.5s ease, -webkit-filter 0.5s ease;
+  -webkit-filter: brightness(30%);
+          filter: brightness(30%);
+  width: 100%;
 }
 
 body main .blog-and-media .most-recent-blog .display-big {
@@ -3214,6 +3236,8 @@ body main .blog-and-media .most-recent-blog .blog-title p {
   color: white;
   font-size: 0.9rem;
   padding: 0rem 2rem 2rem 2rem;
+  -webkit-transition: display 0.5s ease;
+  transition: display 0.5s ease;
 }
 
 body main .blog-and-media .other-blogs {
@@ -3252,6 +3276,11 @@ body main .blog-and-media .other-blogs .cards-blog-wrapper .card-blog {
   margin-bottom: 2rem;
 }
 
+body main .blog-and-media .other-blogs .cards-blog-wrapper .card-blog:hover .img-blog-wrapper img {
+  -webkit-filter: unset;
+          filter: unset;
+}
+
 body main .blog-and-media .other-blogs .cards-blog-wrapper .card-blog p {
   position: absolute;
   bottom: 0;
@@ -3279,6 +3308,10 @@ body main .blog-and-media .other-blogs .cards-blog-wrapper .card-blog .img-blog-
 }
 
 body main .blog-and-media .other-blogs .cards-blog-wrapper .card-blog .img-blog-wrapper img {
+  -webkit-transition: -webkit-filter 0.5s ease;
+  transition: -webkit-filter 0.5s ease;
+  transition: filter 0.5s ease;
+  transition: filter 0.5s ease, -webkit-filter 0.5s ease;
   height: 105%;
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
